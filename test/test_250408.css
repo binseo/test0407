@@ -1,13 +1,19 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 body{
     font-family: Pretendard, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     color: #1d1d1d;
     font-weight: 700;
 }
+.sub_tittt{
+    font-family: Pretendard, sans-serif;
+    font-size: 25px;
+    color: #1d1d1d;
+    font-weight: 400;
+}
 .tit{
     font-family: Pretendard, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     color: blue;
     font-weight: 400;
 }
