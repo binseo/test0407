@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'PT';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../font/Pretendard-Bold.woff2) format('woff2'), url(../font/Pretendard-Bold.woff) format('woff');
+}
+body{
+    font-family: 'PT', sans-serif;
+    font-size: 17px;
+    color: #555555;
+    font-weight: 400;
+    line-height: 1.5;
+    word-break: keep-all;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 1260px;
+    margin: 0 auto;
+}
+*{
+    margin:  0;
+    padding: 0;
+}
+.about{
+    text-align: center;
+}
+.about h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+    letter-spacing: -0.03em;
+    margin: 120px 0 16px 0;
+}
+.about p{
+    margin: 0;
+}
+.about .photo{
+    margin: 54px 0 0 0;
+}
+.invest h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+    letter-spacing: -0.03em;
+    margin: 60px 0 44px 0;
+}
+.invest p{
+    font-size: 50px;
+    font-weight: 400;
+    color: #555555;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+.invest p strong{
+    font-weight: 700;
+    color: blue;
+}
