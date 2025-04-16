@@ -49,25 +49,30 @@ header .gnb ul a {
     padding: 40px 35px;
 }
 
-.visual .tit h2 {
+.visual h2 {
     color: #8dcfbc;
 }
-.visual .tit .sub_tit {
+.visual .more .sub_tit {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.5;
     color: #1d1d1d;
 }
-.visual .tit {
+.visual .more {
     display: flex;
     justify-content: space-between;
 }
+.visual .list {
+    margin: 20px 0 0 0;
+}
 .visual .list ul {
-    width: 832px;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
 }
 .visual .list ul li {
     border: 1px solid #005b45;
     border-radius: 18px;
     padding: 8px 20px;
-
+    
 }
