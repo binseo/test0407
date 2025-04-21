@@ -1,0 +1,242 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+body {
+    color: #3d3d3d;
+    margin: 0 0 400px 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 100px 0 30px 0;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 25px 0 10px 0;
+}
+ul.item {
+    margin: 10px 0 50px 20px;
+}
+ul.item li {
+    padding: 0 0 0 15px; /* 동그라미가 들어갈 여백 */
+    position: relative; /* before 정렬의 기준 */
+}
+ul.item li::before {
+    content: ""; /* 필수 값 */
+    position: absolute; /* li를 기준으로 정렬 */
+    left: 0;
+    top: 12px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%; /* %는 동그라미를 만드는 것 / 0%네모모양 (크기?) */
+    background-color: #ccc;
+}
+
+.img_test .group {
+    display: flex;
+    gap: 100px; /* 사이의 여백 */
+}
+.img_test .group .inner ul {
+    display: flex;
+}
+.img_test .group .inner ul li img {
+    width: 200px;
+}
+
+.img_svg .btn_wrap {
+    display: flex;
+    gap: 35px;
+}
+.img_svg .btn_wrap a {
+    border: 1px solid #666666;
+    border-radius: 30px;
+    display: flex; /* span i 태그 좌우 배치 */
+    align-items: center;
+    padding: 13px 29px 9px 33px;
+    gap: 22px; /* span과 i 사이 여백 */
+}
+.img_svg .tnb {
+    margin: 50px 0 50px 0;
+    display: flex;
+}
+.img_svg .tnb a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+.img_svg .hnb {
+    display: flex;
+}
+.img_svg .hnb a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+}
+
+
+
+.svg_html .btn_wrap {
+    display: flex;
+    gap: 35px;
+}
+.svg_html .btn_wrap a {
+    border: 1px solid #666666;
+    border-radius: 30px;
+    display: block; /* a 필수 값 */
+    padding: 13px 69px 11px 33px;
+    /* 오른쪽에 i태그 무시하고 여백 계산 */
+    position: relative; /* i태그 정렬의 기준 */
+}
+.svg_html .btn_wrap a i {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 30px;
+    top: 15px;
+}
+.svg_html .btn_wrap a:hover { /* : =가상 선택자  */
+    border-color: #0079DB; /* 배경색과 같은색으로 테두리색 */
+    background-color: #0079DB;
+    color: #fff;
+}
+.svg_html .btn_wrap a:hover i svg path {
+    fill: #fff;
+}
+.svg_html .tnb {
+    display: flex;
+    margin: 50px 0 50px 0;
+}
+.svg_html .tnb a {
+    width: 50px;
+    height: 50px;
+    position: relative; /* i 정렬의 기준 */
+    padding: 24px 0 0 0; /* span태그 글자를 아래로 밀기 -i태그 영역은 무시(absolute이기 때문에) */
+    text-align: center; /* span태그 글자 가운데 정렬 */
+}
+.svg_html .tnb a i {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%; /* a의 넓이의 100% /absolute 를 넓이가 안 들어간다. 그래서 %으로 한다. */
+}
+
+.svg_html .hnb {
+    display: flex;
+}
+.svg_html .hnb a {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 0 0;
+}
+
+
+
+.svg_css .btn_wrap {
+    display: flex;
+    gap: 35px;
+}
+.svg_css .btn_wrap a {
+    border: 1px solid #666666;
+    border-radius: 30px;
+    display: block; /* a 필수 값 */
+    padding: 13px 69px 11px 33px;
+    position: relative; /* after 정렬의 기준 */
+} 
+
+.svg_css .btn_wrap a::before {
+    content: ""; /* after/before 가상 선택자 필수 값 */
+}
+.svg_css .btn_wrap a::after { /* ::after/before 는 absolute를 거의 필수 이다. */
+    content: ""; /* after/before 가상 선택자 필수 값 - absolute로 위치를 조정해서 코딩*/
+    position: absolute; /* a를 기준으로 정렬 */
+
+    /* before/after는 넓이/높이 필수 - backgroud 크기 */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.svg_css .btn_wrap a.more1::after {
+    right: 30px;
+    top: 16px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_18' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' transform='matrix(-1 0 0 1 18 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_18)'%3E%3Cpath d='M5.99998 16.2403L13.2403 9L5.99998 1.75969L4.93554 2.82413L11.1116 9L4.93554 15.1759L5.99998 16.2403Z' fill='%23555555'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .btn_wrap a.more2::after {
+    right: 27px;
+    top: 14px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_53' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' transform='matrix(1 0 0 -1 0 20)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_53)'%3E%3Cpath d='M9.16669 9.16666H4.16669V10.8333H9.16669V15.8333H10.8334V10.8333H15.8334V9.16666H10.8334V4.16666H9.16669V9.16666Z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .btn_wrap a:hover {
+    border-color: #0079DB;
+    background-color: #0079DB;
+    color: #fff;
+}
+.svg_css .btn_wrap a.more1:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_18' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' transform='matrix(-1 0 0 1 18 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_18)'%3E%3Cpath d='M5.99998 16.2403L13.2403 9L5.99998 1.75969L4.93554 2.82413L11.1116 9L4.93554 15.1759L5.99998 16.2403Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .btn_wrap a.more2:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_53' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' transform='matrix(1 0 0 -1 0 20)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_53)'%3E%3Cpath d='M9.16669 9.16666H4.16669V10.8333H9.16669V15.8333H10.8334V10.8333H15.8334V9.16666H10.8334V4.16666H9.16669V9.16666Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.svg_css .tnb {
+    margin: 50px 0 50px 0;
+    display: flex;
+}
+.svg_css .tnb a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center; /* 글자 가운데 정렬 */
+    padding: 30px 0 0 0; /* 글자 위 여백주기 - 아이콘 들어갈 자리 */
+    position: relative; /* before 정렬의 기준 */
+}
+.svg_css .tnb a::before {
+    content: ""; 
+    position: absolute; /* a의 기준으로 정렬 */
+    left: 50%; /* a 넓이의 절반에서 부터 오른쪽으로 배치 */
+    transform: translateX(-50%); /* 나 자신 (before) 넓이의 절반을 왼쪽으로 이동 */
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.svg_css .tnb a.lang::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_60' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_60)'%3E%3Cpath d='M11 20.1667C9.74723 20.1667 8.5632 19.9261 7.44793 19.4448C6.33265 18.9636 5.35869 18.3066 4.52605 17.474C3.69341 16.6413 3.03647 15.6674 2.55522 14.5521C2.07397 13.4368 1.83334 12.2528 1.83334 11C1.83334 9.73195 2.07397 8.54411 2.55522 7.43647C3.03647 6.32883 3.69341 5.35869 4.52605 4.52605C5.35869 3.69341 6.33265 3.03647 7.44793 2.55522C8.5632 2.07397 9.74723 1.83334 11 1.83334C12.2681 1.83334 13.4559 2.07397 14.5636 2.55522C15.6712 3.03647 16.6413 3.69341 17.474 4.52605C18.3066 5.35869 18.9636 6.32883 19.4448 7.43647C19.9261 8.54411 20.1667 9.73195 20.1667 11C20.1667 12.2528 19.9261 13.4368 19.4448 14.5521C18.9636 15.6674 18.3066 16.6413 17.474 17.474C16.6413 18.3066 15.6712 18.9636 14.5636 19.4448C13.4559 19.9261 12.2681 20.1667 11 20.1667ZM11 18.2875C11.3972 17.7375 11.741 17.1646 12.0313 16.5688C12.3215 15.9729 12.5583 15.3389 12.7417 14.6667H9.25834C9.44168 15.3389 9.67848 15.9729 9.96876 16.5688C10.259 17.1646 10.6028 17.7375 11 18.2875ZM8.61668 17.9208C8.34168 17.4167 8.10105 16.8934 7.8948 16.3511C7.68855 15.8087 7.51668 15.2472 7.37918 14.6667H4.67501C5.11807 15.4306 5.67189 16.0952 6.33647 16.6604C7.00105 17.2257 7.76112 17.6458 8.61668 17.9208ZM13.3833 17.9208C14.2389 17.6458 14.999 17.2257 15.6636 16.6604C16.3281 16.0952 16.882 15.4306 17.325 14.6667H14.6208C14.4833 15.2472 14.3115 15.8087 14.1052 16.3511C13.899 16.8934 13.6583 17.4167 13.3833 17.9208ZM3.89584 12.8333H7.01251C6.96668 12.5278 6.9323 12.2261 6.90939 11.9281C6.88647 11.6302 6.87501 11.3208 6.87501 11C6.87501 10.6792 6.88647 10.3698 6.90939 10.0719C6.9323 9.77397 6.96668 9.47223 7.01251 9.16668H3.89584C3.81945 9.47223 3.76216 9.77397 3.72397 10.0719C3.68577 10.3698 3.66668 10.6792 3.66668 11C3.66668 11.3208 3.68577 11.6302 3.72397 11.9281C3.76216 12.2261 3.81945 12.5278 3.89584 12.8333ZM8.84584 12.8333H13.1542C13.2 12.5278 13.2344 12.2261 13.2573 11.9281C13.2802 11.6302 13.2917 11.3208 13.2917 11C13.2917 10.6792 13.2802 10.3698 13.2573 10.0719C13.2344 9.77397 13.2 9.47223 13.1542 9.16668H8.84584C8.80001 9.47223 8.76564 9.77397 8.74272 10.0719C8.7198 10.3698 8.70834 10.6792 8.70834 11C8.70834 11.3208 8.7198 11.6302 8.74272 11.9281C8.76564 12.2261 8.80001 12.5278 8.84584 12.8333ZM14.9875 12.8333H18.1042C18.1806 12.5278 18.2379 12.2261 18.2761 11.9281C18.3142 11.6302 18.3333 11.3208 18.3333 11C18.3333 10.6792 18.3142 10.3698 18.2761 10.0719C18.2379 9.77397 18.1806 9.47223 18.1042 9.16668H14.9875C15.0333 9.47223 15.0677 9.77397 15.0906 10.0719C15.1136 10.3698 15.125 10.6792 15.125 11C15.125 11.3208 15.1136 11.6302 15.0906 11.9281C15.0677 12.2261 15.0333 12.5278 14.9875 12.8333ZM14.6208 7.33334H17.325C16.882 6.56945 16.3281 5.90487 15.6636 5.33959C14.999 4.77432 14.2389 4.35418 13.3833 4.07918C13.6583 4.58334 13.899 5.10661 14.1052 5.64897C14.3115 6.19133 14.4833 6.75279 14.6208 7.33334ZM9.25834 7.33334H12.7417C12.5583 6.66112 12.3215 6.02709 12.0313 5.43126C11.741 4.83543 11.3972 4.26251 11 3.71251C10.6028 4.26251 10.259 4.83543 9.96876 5.43126C9.67848 6.02709 9.44168 6.66112 9.25834 7.33334ZM4.67501 7.33334H7.37918C7.51668 6.75279 7.68855 6.19133 7.8948 5.64897C8.10105 5.10661 8.34168 4.58334 8.61668 4.07918C7.76112 4.35418 7.00105 4.77432 6.33647 5.33959C5.67189 5.90487 5.11807 6.56945 4.67501 7.33334Z' fill='%23555555'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .tnb a.menu::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_67' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_67)'%3E%3Cpath d='M2.75 6.41668V4.58334H19.25V6.41668H2.75ZM2.75 17.4167V15.5833H19.25V17.4167H2.75ZM2.75 11.9167V10.0833H19.25V11.9167H2.75Z' fill='%23555555'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.svg_css .hnb {
+    display: flex;
+}
+.svg_css .hnb a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.svg_css .hnb a.sms {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_79' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_79)'%3E%3Cpath d='M8 11C8.28333 11 8.52083 10.9042 8.7125 10.7125C8.90417 10.5208 9 10.2833 9 10C9 9.71667 8.90417 9.47917 8.7125 9.2875C8.52083 9.09583 8.28333 9 8 9C7.71667 9 7.47917 9.09583 7.2875 9.2875C7.09583 9.47917 7 9.71667 7 10C7 10.2833 7.09583 10.5208 7.2875 10.7125C7.47917 10.9042 7.71667 11 8 11ZM12 11C12.2833 11 12.5208 10.9042 12.7125 10.7125C12.9042 10.5208 13 10.2833 13 10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5208 9.09583 12.2833 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0958 9.47917 11 9.71667 11 10C11 10.2833 11.0958 10.5208 11.2875 10.7125C11.4792 10.9042 11.7167 11 12 11ZM16 11C16.2833 11 16.5208 10.9042 16.7125 10.7125C16.9042 10.5208 17 10.2833 17 10C17 9.71667 16.9042 9.47917 16.7125 9.2875C16.5208 9.09583 16.2833 9 16 9C15.7167 9 15.4792 9.09583 15.2875 9.2875C15.0958 9.47917 15 9.71667 15 10C15 10.2833 15.0958 10.5208 15.2875 10.7125C15.4792 10.9042 15.7167 11 16 11ZM2 22V2H22V18H6L2 22ZM5.15 16H20V4H4V17.125L5.15 16Z' fill='%23555555'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .hnb a.alert {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_91' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_91)'%3E%3Cpath d='M4 19V17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08333 5.2375 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.2375 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9792 21.8042 10.5875 21.4125C10.1958 21.0208 10 20.55 10 20H14C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22ZM8 17H16V10C16 8.9 15.6083 7.95833 14.825 7.175C14.0417 6.39167 13.1 6 12 6C10.9 6 9.95833 6.39167 9.175 7.175C8.39167 7.95833 8 8.9 8 10V17Z' fill='%23555555'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .hnb a.cart {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_97' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_97)'%3E%3Cpath d='M3 22V6H7C7 4.61667 7.4875 3.4375 8.4625 2.4625C9.4375 1.4875 10.6167 1 12 1C13.3833 1 14.5625 1.4875 15.5375 2.4625C16.5125 3.4375 17 4.61667 17 6H21V22H3ZM5 20H19V8H5V20ZM12 14C13.3833 14 14.5625 13.5125 15.5375 12.5375C16.5125 11.5625 17 10.3833 17 9H15C15 9.83333 14.7083 10.5417 14.125 11.125C13.5417 11.7083 12.8333 12 12 12C11.1667 12 10.4583 11.7083 9.875 11.125C9.29167 10.5417 9 9.83333 9 9H7C7 10.3833 7.4875 11.5625 8.4625 12.5375C9.4375 13.5125 10.6167 14 12 14ZM9 6H15C15 5.16667 14.7083 4.45833 14.125 3.875C13.5417 3.29167 12.8333 3 12 3C11.1667 3 10.4583 3.29167 9.875 3.875C9.29167 4.45833 9 5.16667 9 6Z' fill='%23555555'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
