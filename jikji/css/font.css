@@ -10,3 +10,35 @@
 	font-display: swap;
 	src: local('Pretendard Regular'), url(../font/Pretendard-Regular.woff2) format('woff2'), url(../font/Pretendard-Regular.woff) format('woff');
 }
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+	font-weight: 300;
+	font-display: swap;
+    src: url(../font/NanumSquareNeo-aLt.ttf);
+    src: url(../font/NanumSquareNeo-aLt.ttf) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+	font-weight: 400;
+	font-display: swap;
+    src: url(../font/NanumSquareNeo-bRg.ttf);
+    src: url(../font/NanumSquareNeo-bRg.ttf) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+	font-weight: 700;
+	font-display: swap;
+    src: url(../font/NanumSquareNeo-cBd.ttf);
+    src: url(../font/NanumSquareNeo-cBd.ttf) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+	font-weight: 800;
+	font-display: swap;
+    src: url(../font/NanumSquareNeo-dEb.ttf);
+    src: url(../font/NanumSquareNeo-dEb.ttf) format("embedded-opentype");
+}
