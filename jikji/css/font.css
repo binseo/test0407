@@ -1,44 +1,17 @@
+/* 웹폰트를 선언 */
 @font-face {
-	font-family: 'Pretendard';
-	font-weight: 700;
-	font-display: swap;
-	src: local('Pretendard Bold'), url(../font/Pretendard-Bold.woff2) format('woff2'), url(../font/Pretendard-Bold.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
+	font-family: "NanumSquareNeo";
 	font-weight: 400;
 	font-display: swap;
-	src: local('Pretendard Regular'), url(../font/Pretendard-Regular.woff2) format('woff2'), url(../font/Pretendard-Regular.woff) format('woff');
+	src: url("../font/NanumSquareNeoTTF-bRg.eot?#iefix") format("embedded-opentype"), 
+         url(../font/NanumSquareNeoTTF-bRg.woff2) format("woff2"),
+         url(../font/NanumSquareNeoTTF-bRg.woff) format("woff");
 }
-
 @font-face {
-    font-family: 'NanumSquareNeo';
-	font-weight: 300;
-	font-display: swap;
-    src: url(../font/NanumSquareNeo-aLt.ttf);
-    src: url(../font/NanumSquareNeo-aLt.ttf) format("embedded-opentype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeo';
-	font-weight: 400;
-	font-display: swap;
-    src: url(../font/NanumSquareNeo-bRg.ttf);
-    src: url(../font/NanumSquareNeo-bRg.ttf) format("embedded-opentype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeo';
+	font-family: "NanumSquareNeo";
 	font-weight: 700;
 	font-display: swap;
-    src: url(../font/NanumSquareNeo-cBd.ttf);
-    src: url(../font/NanumSquareNeo-cBd.ttf) format("embedded-opentype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeo';
-	font-weight: 800;
-	font-display: swap;
-    src: url(../font/NanumSquareNeo-dEb.ttf);
-    src: url(../font/NanumSquareNeo-dEb.ttf) format("embedded-opentype");
+	src: url("../font/NanumSquareNeoTTF-cBd.eot#iefix") format("embedded-opentype"), 
+         url(../font/NanumSquareNeoTTF-cBd.woff2) format("woff2"),
+         url(../font/NanumSquareNeoTTF-cBd.woff) format("woff");
 }
