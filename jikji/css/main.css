@@ -62,8 +62,6 @@ header .tnb a.menu::before {
 
 
 
-
-
 .visual {
     background: url(../images/visual_bg.jpg) no-repeat center center / cover;
     border-bottom-right-radius: 250px;
@@ -76,12 +74,57 @@ header .tnb a.menu::before {
     align-items: center;
 }
 
-
 @media screen and (max-width:1440px) {
     /* 브라우저의 넓이가 1440이하일때만 적용되는 css */
     .visual .picture  {
         transform: translate(0, 50%); 
     }
+}
+
+
+.metal {
+    margin: 145px;
+}
+.metal .tit h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #AB7D3F;
+} 
+.metal .tit p {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 30px 0 50px 0;
+}
+.metal .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.metal .list ul li {
+    width: calc(33.33% - 16px);
+}
+.metal .list ul li a {
+    display: block;
+}
+.metal .list ul li a .photo {
+    height: 250px;
+    overflow: hidden;
+}
+.metal .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.metal .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.metal .list ul li a h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 30px 0 10px 0;
 }
 
 
