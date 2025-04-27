@@ -127,6 +127,36 @@ header .tnb a.menu::before {
     margin: 30px 0 10px 0;
 }
 
+.world {
+    padding: 182px 0 172px 0;
+    background: url(../images/world_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+    height: 800px;
+}
+.world h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #AB7D3F;
+
+}
+.world .sub_tit {
+    margin: 40px 0 140px 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.world .cnt {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding: 40px 0 0 0;
+}
+.world .inner {
+    display: flex;
+    gap: 280px;
+}
+.world .inner .photo {
+    height: 272px;
+    margin: 0 0 30px 0;
+}
 
 footer {
     margin: 400px 0 0 0;
