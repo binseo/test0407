@@ -158,6 +158,106 @@ header .tnb a.menu::before {
     margin: 0 0 30px 0;
 }
 
+.community {
+    margin: 170px 0 0 0;
+}
+.community .tit h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #AB7D3F;
+    margin: 0 0 30px;
+}
+.community .tit p {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.community .list {
+    margin: 60px 0 0 0;
+}
+.community .list {
+    display: flex;
+    justify-content: space-between;
+}
+.community .list .group {
+    width: calc(50% - 12px);
+}
+.community .list .group ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.community .list .group ul li a {
+    padding: 0 20px 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.community .list .group ul li.color,
+.community .list .group ul li.gray {
+    width: calc(50% - 12px);
+}
+.community .list .group ul li.color a,
+.community .list .group ul li.gray a {
+    height: 250px;
+}
+.community .list .group ul li.color a {
+    color: #fff;
+}
+.community .list .group ul li.color.bg1 a {
+    background-color: #2d2d2d;
+}
+.community .list .group ul li.color.bg2 a {
+    background-color: #583F1C;
+}
+.community .list .group ul li.gray a {
+    background-color: #ededed;
+}
+.community .list .group ul li.review a {
+    padding: 0 20px 15px 20px;
+    height: 350px;
+    color: #fff;
+}
+.community .list .group ul li.review {
+    width: 100%;  
+}
+.community .list .group ul li.review.bg1 a {
+    background: url(../images/review01.jpg) no-repeat center center / cover;
+}
+.community .list .group ul li.review.bg2 a {
+    background: url(../images/review02.jpg) no-repeat center center / cover;
+}
+.community .list .group ul li a .photo {
+    text-align: center;
+}
+.community .list .group ul li.review a .photo {
+ text-align: right;
+}
+.community .list .group ul li a strong {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+.community .list .group ul li.gray a strong {
+    color: #1d1d1d;
+}
+.community .list .group ul li a span {
+    line-height: 1.5; /* 행간 배수 */
+    height: 4.5em; /* 행간 줄수  */
+    overflow: hidden; /* 글자가 넘으면 지정 테두리 안에 잘린다.*/
+}
+
+.promotion {
+    text-align: center;
+    margin: 170px 0 0 0;
+    background: url(../images/promotion_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+    height: 800px;
+    padding: 230px 0 200px 0;
+}
+
 footer {
-    margin: 400px 0 0 0;
+    background-color: #2d2d2d;
+    color: #fff;
 }
