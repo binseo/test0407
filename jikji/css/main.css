@@ -165,7 +165,7 @@ header .tnb a.menu::before {
     font-size: 17px;
     font-weight: 700;
     color: #AB7D3F;
-    margin: 0 0 30px;
+    margin: 0 0 30px 0;
 }
 .community .tit p {
     font-size: 40px;
@@ -256,8 +256,76 @@ header .tnb a.menu::before {
     height: 800px;
     padding: 230px 0 200px 0;
 }
+.promotion h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #AB7D3F;
+    margin: 0 0 30px 0;
+}
+.promotion .sub_tit {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+}
+.promotion .more {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    padding: 10px 38px;
+    margin: 69px 0 0 0;
+}
+.promotion .more:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #1d1d1d;
+    font-weight: 700;
+}
+
+
 
 footer {
     background-color: #2d2d2d;
     color: #fff;
+    padding: 80px 0 90px 0;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 40px;
+}
+footer .f_nav ul li {
+    position: relative;
+}
+footer .f_nav ul li::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
+}
+footer .f_nav ul li:first-child::before {
+    display: none;
+}
+footer .f_nav ul li a {
+    position: relative;
+}
+footer .f_nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+}
+footer .f_info  {
+    margin: 20px 0 20px 0;
+}
+footer .f_info span {
+    color: rgba(255,255,255,0.5);
+}
+footer .copyright {
+    color: rgba(255,255,255,0.5);
 }
