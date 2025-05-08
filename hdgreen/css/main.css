@@ -65,10 +65,10 @@ header .tnb a.icon02::before {
         header {
             height: 56px;
             border-bottom: 0;
-            padding: 0;
+            padding: 0 0 0 20px;
         }
-        header .wrapper {
-            margin-right: 0;
+        header .logo a img {
+            width: 70px;
         }
         header .gnb .gnb_open {
             display: block; /* 모바일에서만 보임 */
@@ -151,6 +151,10 @@ header .tnb a.icon02::before {
             display: none;
         }
 } /* @media */
+
+.business {
+    margin: 200px 0 0 0;
+}
 
 
 
