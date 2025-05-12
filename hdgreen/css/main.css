@@ -430,7 +430,7 @@ header .tnb a.icon02::before {
     .esg .list ul li a {
         display: block;
         height: auto;
-        padding: 38px 45px 38px 30px;
+        padding: 38px 65px 38px 30px;
         border-radius: 5px;
         position: relative;
     }

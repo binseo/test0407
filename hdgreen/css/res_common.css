@@ -6,6 +6,7 @@ body {
     line-height: 1.5; /* 배수 */
     color: #555555;
     word-break: keep-all;
+    word-wrap: break-word;
 }
 
 .wrapper {
