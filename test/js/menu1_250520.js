@@ -28,7 +28,7 @@ $(document).ready(function(){
             $(this).addClass('over')
         }
     })
-
+    /* 메뉴는 오버를 감지하는 영역보다 out을 잡아주는 영역이 커야함 ################## 해야함 ################*/
 
 
 }) //$(document).ready
