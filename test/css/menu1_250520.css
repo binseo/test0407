@@ -3,8 +3,60 @@
 @import url(font.css);
 
 header {
-    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    color: #fff;
 }
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    width: 140px;
+    height: 47px;
+    background: url(../image/logo_w.svg) no-repeat center center / contain;
+}
+header .tnb .search {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_88' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_88)'%3E%3Cpath d='M17.5 17.5C15.8959 17.5 14.5226 16.9288 13.3802 15.7865C12.2379 14.6441 11.6667 13.2708 11.6667 11.6667C11.6667 10.0625 12.2379 8.68923 13.3802 7.54687C14.5226 6.40451 15.8959 5.83333 17.5 5.83333C19.1042 5.83333 20.4775 6.40451 21.6198 7.54687C22.7622 8.68923 23.3334 10.0625 23.3334 11.6667C23.3334 13.2708 22.7622 14.6441 21.6198 15.7865C20.4775 16.9288 19.1042 17.5 17.5 17.5ZM5.83337 26.25V25.0833C5.83337 24.2569 6.04605 23.4974 6.47139 22.8047C6.89674 22.112 7.46185 21.5833 8.16671 21.2187C9.67365 20.4653 11.2049 19.9002 12.7605 19.5234C14.316 19.1467 15.8959 18.9583 17.5 18.9583C19.1042 18.9583 20.6841 19.1467 22.2396 19.5234C23.7952 19.9002 25.3264 20.4653 26.8334 21.2187C27.5382 21.5833 28.1033 22.112 28.5287 22.8047C28.954 23.4974 29.1667 24.2569 29.1667 25.0833V26.25C29.1667 27.0521 28.8811 27.7387 28.3099 28.3099C27.7388 28.8811 27.0521 29.1667 26.25 29.1667H8.75004C7.94796 29.1667 7.26133 28.8811 6.69014 28.3099C6.11896 27.7387 5.83337 27.0521 5.83337 26.25ZM8.75004 26.25H26.25V25.0833C26.25 24.816 26.1832 24.5729 26.0495 24.3542C25.9158 24.1354 25.7396 23.9653 25.5209 23.8438C24.2084 23.1875 22.8837 22.6953 21.5469 22.3672C20.2101 22.0391 18.8612 21.875 17.5 21.875C16.1389 21.875 14.79 22.0391 13.4532 22.3672C12.1164 22.6953 10.7917 23.1875 9.47921 23.8438C9.26046 23.9653 9.08424 24.1354 8.95056 24.3542C8.81688 24.5729 8.75004 24.816 8.75004 25.0833V26.25ZM17.5 14.5833C18.3021 14.5833 18.9888 14.2977 19.5599 13.7266C20.1311 13.1554 20.4167 12.4687 20.4167 11.6667C20.4167 10.8646 20.1311 10.178 19.5599 9.60677C18.9888 9.03559 18.3021 8.75 17.5 8.75C16.698 8.75 16.0113 9.03559 15.4401 9.60677C14.869 10.178 14.5834 10.8646 14.5834 11.6667C14.5834 12.4687 14.869 13.1554 15.4401 13.7266C16.0113 14.2977 16.698 14.5833 17.5 14.5833Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media screen and (min-width:1025px) {
+    header .gnb .gnb_open,
+    header .gnb .gnb_close {
+        display: none;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 120px;
+        align-items: center;
+        position: relative; /* depth2정렬의 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 90px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+    } 
+
+} /* @media */
 
 .visual {
     background: url(../image/visual_bg.jpg) no-repeat center center / cover;
@@ -22,7 +74,8 @@ header {
     .visual h2 {
         font-size: 30px;
     }
-}
+} /* @media */
+
 footer {
     margin: 2000px 0 0 0;
 }
