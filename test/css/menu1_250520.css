@@ -1,0 +1,28 @@
+@import url(default.css);
+@import url(common_full.css);
+@import url(font.css);
+
+header {
+    
+}
+
+.visual {
+    background: url(../image/visual_bg.jpg) no-repeat center center / cover;
+    height: 100vh;
+}
+.visual h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    padding: 45vh 0 0 0;
+}
+
+@media screen and (max-width:768px) {
+    .visual h2 {
+        font-size: 30px;
+    }
+}
+footer {
+    margin: 2000px 0 0 0;
+}
