@@ -21,7 +21,7 @@ header .logo a {
     display: block;
     width: 140px;
     height: 47px;
-    background: url(../image/logo_w.svg) no-repeat center center / contain;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
 }
 header .tnb .search {
     display: block;
@@ -83,7 +83,7 @@ header .tnb .search {
         border-bottom: 0;
     }
     header.menu_over .logo a {
-        background-image: url(../image/logo.svg);
+        background-image: url(../images/logo.svg);
     }
     header.menu_over .gnb .gnb_wrap ul.depth1 > li.over > a {
         color: #004289;
@@ -215,7 +215,7 @@ header .tnb .search {
 } /* @media */
 
 .visual {
-    background: url(../image/visual_bg.jpg) no-repeat center center / cover;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
     height: 100vh;
 }
 .visual h2 {
