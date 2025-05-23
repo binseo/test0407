@@ -2,4 +2,53 @@
 @import url(font.css);
 @import url(common_full.css);
 
+.visual {
+    margin: 0 0 1000px 0;
+}
+.visual .swiper-slide {
+    height: 900px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.visual .swiper-slide.popup1 {
+    background-image: url(../images/popup01.jpg);
+}
+.visual .swiper-slide.popup2 {
+    background-image: url(../images/popup02.jpg);
+}
+.visual .swiper-slide.popup3 {
+    background-image: url(../images/popup03.jpg);
+}
 
+.visual .swiper-slide h3 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 415px 0 30px 0;
+}
+
+.visual .paging {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.visual .paging .swiper-pagination-bullet {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0;
+    background: none;
+    opacity: 1;
+}
+.visual .paging .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
