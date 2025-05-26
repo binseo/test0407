@@ -1,0 +1,30 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common_full.css);
+
+.visual {
+    position: relative; /* btn_wrap */
+}
+.visual .popup .popup_wrap .popup_item {
+    height: 900px;
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visual .popup .popup_wrap .popup_item.bg1 {
+    background-image: url(../images/popup01.jpg);
+}
+.visual .popup .popup_wrap .popup_item.bg2 {
+    background-image: url(../images/popup02.jpg);
+}
+.visual .popup .popup_wrap .popup_item.bg3 {
+    background-image: url(../images/popup03.jpg);
+}
+
+.visual .popup .popup_wrap .popup_item h3 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 415px 0 30px 0;
+}
