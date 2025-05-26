@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
+    const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싸는 요소의 class명 */
 
         autoplay: {  /* 팝업 자동 실행 */
-            delay: 50000, // 2500 -> 2.5초
+            delay: 2500, // 2500 -> 2.5초
             disableOnInteraction: true,
         },
 
