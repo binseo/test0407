@@ -15,20 +15,20 @@ body {
 }
 
 #wrap {
-    min-width: 1320px;
-    /* 1260 + 30 + 30 = 1320 이정도 넓이로 줄면 안된다. */
     position: relative; /* header 정렬의 기준 */
+    overflow-x: hidden; /* 가로스크롤 삭제 */
+    width: 100%; 
 }
 
-@media screen and (max-width:640px){
-    /* 브라우저 넓이가 640px 이하에서만 작동 */  
+@media screen and (max-width:1300px){ /* 20 + 20 = 40 + 1260 = 1300  */
     .wrapper {
-        width: auto; /* 넓이는 알아서 좌우여백 20px */
-        margin: 0 20px; 
+    width: auto;
+    margin: 0 20px;
     }
-    #wrap {
-        min-width: 0; /* 최소 넓이 없음 */
-    }
+}
+
+@media screen and (max-width:768px){
+    /* 브라우저 넓이가 640px 이하에서만 작동 */  
     body {
         font-size: 16px;
     }
@@ -38,10 +38,11 @@ body {
 /* 글자를 숨겨야하는 경우 blind 클래스를 적용 */
 .blind {
     position: absolute;
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     width: 1px;
     height: 1px;
     margin: -1px;
     overflow: hidden;
     color: transparent;
 }
+
