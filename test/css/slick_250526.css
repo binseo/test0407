@@ -243,8 +243,67 @@
 }
 
 /* ############### .notice .list .list_wrap .list_item a .txt 해야함 ############### */
+.notice .list .list_wrap .list_item a .txt {
+    padding: 40px 30px 60px 30px;
+}
+
+.notice .list .list_wrap .list_item a .txt h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    color: #1d1d1d;
+    /* 한 줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice .list .list_wrap .list_item a .txt p {
+    height: 4.5em;
+    overflow: hidden;
+}
 
 
+@media screen and (max-width: 1300px) {
+    .notice .list {
+        width: calc(100% - 20px);
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notice {
+        margin: 80px 0 0 0;
+        padding: 70px 0;
+    }
+    .notice .tit h2 {
+        font-size: 25px;
+    }
+    
+    .notice .list {
+        margin: 50px 0 0 0;
+        width: calc(100% - 20px);
+        left: 20px;
+    }
+    .notice .list .list_wrap .list_item {
+        width: 264px;
+        margin-right: 16px;
+    }
+    .notice .list .list_wrap .list_item a {
+        border-radius: 10px;
+    }
+    .notice .list .list_wrap .list_item a .photo {
+        border-radius: 10px 10px 0 0;
+        height: 208px;
+    }
+    .notice .list .list_wrap .list_item a .txt {
+        padding: 20px;
+    }
+    
+    .notice .list .list_wrap .list_item a .txt h3 {
+        font-size: 20px;
+    }
+}
 
 
 footer {
