@@ -348,7 +348,31 @@ header.fixed .logo a {
 }
 
 /* ####################### porject css 해야함 ###################### */
+.porject .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.project .tit {
 
+}
+.porject .tit h2 {
+    color: #008290;
+    margin: 0 0 20px 0;
+}
+.porject .list {
+    width: 52.23%; /* 658 / 1260 * 100 = 52.23% */
+}
+.porject .list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.porject .list ul li {
+    width: calc(50% - 8px);
+}
+.project .list ul li:nth-child(even) {
+    transform: translateY(-150px);
+}
 
 
 
