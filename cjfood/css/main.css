@@ -343,39 +343,125 @@ header.fixed .logo a {
 }
 
 
-.porject {
+.project {
     margin: 200px 0 0 0;
 }
-
-/* ####################### porject css 해야함 ###################### */
-.porject .wrapper {
+.project .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 .project .tit {
-
+    position: sticky;
+    top: 120px;
 }
-.porject .tit h2 {
+.project .tit h2 {
     color: #008290;
     margin: 0 0 20px 0;
 }
-.porject .list {
+.project .list {
     width: 52.23%; /* 658 / 1260 * 100 = 52.23% */
+    margin: 140px 0 0 0;
 }
-.porject .list ul {
+.project .list ul {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
-.porject .list ul li {
+.project .list ul li {
     width: calc(50% - 8px);
 }
 .project .list ul li:nth-child(even) {
     transform: translateY(-150px);
 }
+.project .list ul li a {
+    display: block;
+    position: relative;
+}
+.project .list ul li a .photo {
+    overflow: hidden;
+    height: 450px;
+    border-radius: 20px;
+    position: relative; /* before */
+}
+.project .list ul li a .photo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 101, 112, 0.9);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.project .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project .list ul li a .txt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    padding: 0 40px 40px 40px;
+}
+.project .list ul li a .txt h3 {
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 25px;
+}
+.project .list ul li a .txt p {
+    height: 4.5em;
+    overflow: hidden;
+    margin: 10px 0 20px 0;
+    display: none;
+}
+.project .list ul li a .txt span {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    padding-right: 30px;
+    position: relative;
+    display: none;
+}
+.project .list ul li a .txt span::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_42_13' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_42_13)'%3E%3Cpath d='M10.3123 11.6878H5.729C5.53421 11.6878 5.37097 11.6219 5.23927 11.4901C5.10743 11.3582 5.0415 11.1949 5.0415 11.0001C5.0415 10.8052 5.10743 10.6419 5.23927 10.5104C5.37097 10.3787 5.53421 10.3128 5.729 10.3128H10.3123V5.72949C10.3123 5.5347 10.3783 5.37146 10.5101 5.23976C10.642 5.10792 10.8053 5.04199 11.0001 5.04199C11.195 5.04199 11.3583 5.10792 11.4898 5.23976C11.6215 5.37146 11.6873 5.5347 11.6873 5.72949V10.3128H16.2707C16.4655 10.3128 16.6287 10.3787 16.7604 10.5106C16.8922 10.6424 16.9582 10.8058 16.9582 11.0006C16.9582 11.1955 16.8922 11.3587 16.7604 11.4903C16.6287 11.622 16.4655 11.6878 16.2707 11.6878H11.6873V16.2712C11.6873 16.466 11.6214 16.6292 11.4896 16.7609C11.3577 16.8927 11.1944 16.9587 10.9996 16.9587C10.8047 16.9587 10.6414 16.8927 10.5099 16.7609C10.3782 16.6292 10.3123 16.466 10.3123 16.2712V11.6878Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.project .list ul li a .txt span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: calc(100% - 10px);
+    height: 1px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+@media screen and (min-width:1025px) {
+    .project .list ul li a:hover .photo::before {
+        opacity: 1;
+    }
+    .project .list ul li a:hover .txt p {
+        display: block;
+    }
+    .project .list ul li a:hover .txt span {
+        display: inline-block;
+    }
+}
 
 
-
+/* ####################### porject 모바일 css 해야함 ###################### */
 
 
 

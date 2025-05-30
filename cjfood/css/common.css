@@ -16,7 +16,7 @@ body {
 
 #wrap {
     position: relative; /* header 정렬의 기준 */
-    overflow-x: hidden; /* 가로스크롤 삭제 */
+    /* overflow-x: hidden; 가로스크롤 삭제 .project .tit { position: sticky; -> 이것 때문에 지워야함 */
     width: 100%; 
 }
 
