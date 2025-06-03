@@ -461,11 +461,63 @@ header.fixed .logo a {
 }
 
 
-/* ####################### porject 모바일 css 해야함 ###################### */
 
 
+@media screen and (max-width:768px) {
+    .project {
+        margin: 80px 0 0 0;
+    }
+    .project .wrapper {
+        display: block;
+    }
+    .project .tit {
+        position: relative;
+        top: auto;
+    }
+    .project .tit h2 {
+        margin: 0 0 10px 0;
+    }
+    .project .tit p {
+        font-size: 25px;
+    }
+    .project .tit p br {
+        display: none;
+    }
+    .project .list {
+        width: auto;
+        margin: 30px 0 0 0;
+    }
+    .project .list ul {
+        gap: 20px 16px;
+    }
+    .project .list ul li {
+        width: calc(50% - 8px);
+    }
+    .project .list ul li:nth-child(even) {
+        transform: none;
+    }
+    .project .list ul li a .photo {
+        height: 120px;
+        border-radius: 10px;
+    }
+    .project .list ul li a .txt {
+        position: relative;
+        color: #1d1d1d;
+        left: auto;
+        bottom: auto;
+        width: auto;
+        padding: 0;
+    }
+    .project .list ul li a .txt h3 {
+        font-weight: 500;
+        font-size: 16px;
+        margin: 10px 0 0 0;
+    }
+
+}
 
 
+/* ####################### webzine 해야함 ###################### */
 
 
 
