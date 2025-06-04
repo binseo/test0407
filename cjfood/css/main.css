@@ -838,6 +838,50 @@ header.fixed .logo a {
 
 /* ####################### service 해야함 ###################### */
 
+.service {
+    margin: 140px 0 0 0;
+    padding: 100px 0 200px 0;
+    background-color: #E8F2F1;
+}
+.service .tit h2 {
+    color: #008290;
+    margin: 0 0 20px 0;
+}
+.service .list {
+    margin: 80px 0 0 0;
+}
+.service .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+/* ####################### .service .list ul li  넓이 해야함 ###################### */
+.service .list ul li a {
+    display: block;
+    padding: 42px 0 42px 60px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+}
+.service .list ul li a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_981' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_981)'%3E%3Cpath d='M18.333 21.6663H9.99967C9.52745 21.6663 9.13162 21.5066 8.81217 21.1872C8.49273 20.8677 8.33301 20.4719 8.33301 19.9997C8.33301 19.5275 8.49273 19.1316 8.81217 18.8122C9.13162 18.4927 9.52745 18.333 9.99967 18.333H18.333V9.99967C18.333 9.52745 18.4927 9.13162 18.8122 8.81217C19.1316 8.49273 19.5275 8.33301 19.9997 8.33301C20.4719 8.33301 20.8677 8.49273 21.1872 8.81217C21.5066 9.13162 21.6663 9.52745 21.6663 9.99967V18.333H29.9997C30.4719 18.333 30.8677 18.4927 31.1872 18.8122C31.5066 19.1316 31.6663 19.5275 31.6663 19.9997C31.6663 20.4719 31.5066 20.8677 31.1872 21.1872C30.8677 21.5066 30.4719 21.6663 29.9997 21.6663H21.6663V29.9997C21.6663 30.4719 21.5066 30.8677 21.1872 31.1872C20.8677 31.5066 20.4719 31.6663 19.9997 31.6663C19.5275 31.6663 19.1316 31.5066 18.8122 31.1872C18.4927 30.8677 18.333 30.4719 18.333 29.9997V21.6663Z' fill='%23006570'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.service .list ul li a strong {
+    display: block;
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 30px;
+    color: #1d1d1d;
+} 
 
 
 
