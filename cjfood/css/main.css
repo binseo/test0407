@@ -836,7 +836,7 @@ header.fixed .logo a {
 
 
 
-/* ####################### service 해야함 ###################### */
+
 
 .service {
     margin: 140px 0 0 0;
@@ -855,19 +855,23 @@ header.fixed .logo a {
     justify-content: space-between;
     gap: 24px;
 }
-/* ####################### .service .list ul li  넓이 해야함 ###################### */
+
+.service .list ul li {
+    width: calc(33.33% - 16px);
+}
 .service .list ul li a {
     display: block;
     padding: 42px 0 42px 60px;
     background-color: #fff;
     border-radius: 20px;
     position: relative;
+    transition: 0.5s;
 }
 .service .list ul li a::after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 60px;
+    top: 40px;
     width: 40px;
     height: 40px;
     background-position: center center;
@@ -881,10 +885,110 @@ header.fixed .logo a {
     line-height: 1.2;
     font-size: 30px;
     color: #1d1d1d;
+    transition: 0.5s;
 } 
+
+@media screen and (min-width:1025px) {
+    .service .list ul li:hover a {
+        background-color: #008290;
+        color: #fff;
+        box-shadow: 5px 4px 10px 0 rgba(0,0,0,0.3);
+    }
+    .service .list ul li:hover a::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_1125' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_1125)'%3E%3Cpath d='M18.3335 21.6663H10.0002C9.52794 21.6663 9.13211 21.5066 8.81266 21.1872C8.49322 20.8677 8.3335 20.4719 8.3335 19.9997C8.3335 19.5275 8.49322 19.1316 8.81266 18.8122C9.13211 18.4927 9.52794 18.333 10.0002 18.333H18.3335V9.99967C18.3335 9.52745 18.4932 9.13162 18.8127 8.81217C19.1321 8.49273 19.5279 8.33301 20.0002 8.33301C20.4724 8.33301 20.8682 8.49273 21.1877 8.81217C21.5071 9.13162 21.6668 9.52745 21.6668 9.99967V18.333H30.0002C30.4724 18.333 30.8682 18.4927 31.1877 18.8122C31.5071 19.1316 31.6668 19.5275 31.6668 19.9997C31.6668 20.4719 31.5071 20.8677 31.1877 21.1872C30.8682 21.5066 30.4724 21.6663 30.0002 21.6663H21.6668V29.9997C21.6668 30.4719 21.5071 30.8677 21.1877 31.1872C20.8682 31.5066 20.4724 31.6663 20.0002 31.6663C19.5279 31.6663 19.1321 31.5066 18.8127 31.1872C18.4932 30.8677 18.3335 30.4719 18.3335 29.9997V21.6663Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    .service .list ul li:hover a strong {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .service {
+        margin: 80px 0 0 0;
+        padding: 60px 0 65px 0;
+    }
+    .service .tit h2 {
+        margin: 0 0 10px 0;
+    }
+    .service .tit p {
+        font-size: 25px;
+    }
+    .service .list {
+        margin: 30px 0 0 0;
+    }
+    .service .list ul {
+        gap: 7px;
+    }
+    
+    .service .list ul li {
+        width: calc(33.33% - 4.67px);
+    }
+    .service .list ul li a {
+        text-align: center;
+        height: 100px;
+        padding: 20px 0 0 0;
+        border-radius: 10px;
+    }
+    .service .list ul li a::after {
+        right: auto;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_981' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_981)'%3E%3Cpath d='M18.333 21.6663H9.99967C9.52745 21.6663 9.13162 21.5066 8.81217 21.1872C8.49273 20.8677 8.33301 20.4719 8.33301 19.9997C8.33301 19.5275 8.49273 19.1316 8.81217 18.8122C9.13162 18.4927 9.52745 18.333 9.99967 18.333H18.333V9.99967C18.333 9.52745 18.4927 9.13162 18.8122 8.81217C19.1316 8.49273 19.5275 8.33301 19.9997 8.33301C20.4719 8.33301 20.8677 8.49273 21.1872 8.81217C21.5066 9.13162 21.6663 9.52745 21.6663 9.99967V18.333H29.9997C30.4719 18.333 30.8677 18.4927 31.1872 18.8122C31.5066 19.1316 31.6663 19.5275 31.6663 19.9997C31.6663 20.4719 31.5066 20.8677 31.1872 21.1872C30.8677 21.5066 30.4719 21.6663 29.9997 21.6663H21.6663V29.9997C21.6663 30.4719 21.5066 30.8677 21.1872 31.1872C20.8677 31.5066 20.4719 31.6663 19.9997 31.6663C19.5275 31.6663 19.1316 31.5066 18.8122 31.1872C18.4927 30.8677 18.333 30.4719 18.333 29.9997V21.6663Z' fill='%23006570'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    .service .list ul li a strong {
+        font-size: 20px;
+    } 
+}
 
 
 
 footer {
-    margin: 1000px 0 0 0;
+    padding: 100px 0 120px 0;
+    background-color: #252122;
+    color: #fff;
+}
+
+footer .f_nav ul {
+    display: flex;
+    gap: 35px;
+}
+footer .f_nav ul li a {
+    display: block;
+    font-weight: 700;
+}
+
+footer .f_info {
+    margin: 20px 0;
+}
+footer .f_info .group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+footer .f_info .group:last-child {
+    margin-bottom: 0;
+}
+
+footer .copyright {
+    color: rgba(255,255,255,0.6);
+}
+
+@media screen and (max-width:768px) {
+    footer {
+        padding: 60px 0 65px 0;
+    }
+    
+    footer .f_nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    footer .f_info .group {
+        flex-wrap: wrap;
+    }
 }
