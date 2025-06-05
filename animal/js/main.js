@@ -2,6 +2,68 @@ $(document).ready(function(){
 
 	/************************************ header 와 메뉴 : 시작 ************************************/
 
+	/*
+	* pc인지 모바일인지 구분 - 브라우저 넓이
+	* 스크롤 값 계산
+	* 공통사항 : 브라우저가 스크롤 되면 or header 오버하면 header fixed 클래스 추가	
+	* px일 때 : 마우스를 오버한 li에만 over 클래스 추가
+	* 모바일 때 : 메뉴 열기를 클릭하면 header에 menu_open 클래스 추가
+				 1차 메뉴를 클릭하면 (하위메뉴가 있는 1차메뉴만) 클릭한 li에 open 클래스 추가
+	*/
+
+	let device_status // 모바일인지 pc인지
+	let scrolling // 스크롤한 값
+	let window_w // 브라우저 넓이
+	let mobile_size = 1024 // 모바일로 전환 되는 사이즈 
+
+	
+	scroll_chk()
+	resize_chk()
+	$(window).resize(function(){
+		resize_chk()
+	})
+	$(window).scroll(function(){ // 브라우저를 스크롤 할 때마다 1번씩 실행
+		scroll_chk() // 함수 실행
+	})
+
+	
+	function scroll_chk(){ // 함수 선언
+		scrolling = $(window).scrollTop()
+		// console.log(scrolling)
+		if(scrolling > 0){
+			$('header').addClass('fixed')
+		}else{
+			$('header').removeClass('fixed')
+		}
+	}
+
+	function resize_chk(){
+		window_w = $(window).width()
+		// console.log(window_w)
+		if(window_w > mobile_size){ // 1025
+			device_status = 'pc'
+		}else{
+			device_status = 'mobile'
+		}
+		// console.log(device_status)
+	}
+
+	/* header에 마우스를 오버했을 때 -- 클릭했을 때도 작동함 */
+	$('header').on('mouseenter focusin', function(){
+		// console.log('오버오버')
+		if(device_status == 'pc'){
+			$('header').addClass('fixed')
+		}
+	})
+	$('header').on('mouseleave focusout', function(){
+		// console.log('오버오버')
+		if(scrolling == 0){
+			$('header').removeClass('fixed')
+		}
+	})
+
+	// ### $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function() 해야함 ####
+
 
 
 
