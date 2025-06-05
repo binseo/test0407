@@ -11,6 +11,25 @@
 
 
 
+/* ################ header css 해야함 / js도  ############## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .visual .swiper-slide {
     color: #fff;
@@ -74,8 +93,40 @@
 }
 
 @media screen and (max-width:1024px) { 
-    /* ###################### 반응형 모바일과 js 해야함 ##################### */
+    
+    .visual .swiper-slide .wrapper {
+        height: 750px; 
+        padding: 0 0 120px 0;
+    }
+    
+    .visual .swiper-slide p {
+        font-size: 45px;
+    }
 }
+
+@media screen and (max-width:768px) { 
+    
+    .visual .swiper-slide .wrapper { 
+        height: 600px; 
+        padding: 0 0 100px 0;
+    }
+    
+    .visual .swiper-slide p { 
+        font-size: 30px;
+    }
+    
+    .visual .btn_wrap {
+        bottom: 20px;
+    }
+
+}
+
+
+
+
+
+
+
 
 
 footer {
