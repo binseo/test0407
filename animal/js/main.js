@@ -62,7 +62,18 @@ $(document).ready(function(){
 		}
 	})
 
-	// ### $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function() 해야함 ####
+
+	$('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
+		if(device_status == 'pc'){
+			$(this).addClass('over')
+		}
+	})
+
+	$('header .gnb .gnb_wrap ul.depth1 > li').on('mouseleave', function(){
+		$(this).removeClass('over')
+	})
+
+	// ### $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child') 해야함 ####
 
 
 

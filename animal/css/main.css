@@ -182,7 +182,9 @@ header.fixed .logo a {
 
 /* ###################### header 모바일과 pc 모바일 js 해야함!!!! ##################### */
 
+@media screen and (max-width:1024px) { /* 모바일 */
 
+}
 
 
 
