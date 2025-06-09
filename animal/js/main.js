@@ -78,7 +78,25 @@ $(document).ready(function(){
 		$('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
 	})
 
-	// ### 모바일 gnb_open 해야함 ####
+	
+	$('header .gnb .gnb_open').on('click', function(){
+		$('header').addClass('menu_open')
+	})
+	$('header .gnb .gnb_close').on('click', function(){
+		$('header').removeClass('menu_open')
+	})
+
+	/* 
+		닫힌 메뉴를 클릭히면 열리고, 열린 메뉴를 클릭하면 닫힘
+		동시에 여러 개의 메뉴가 열려있을 수도 있음
+		toggleClass - 클래스가 없으면 추가하고, 있으면 삭제
+	*/
+	$('header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a').on('click', function(e){
+		if(device_status == 'mobile'){
+			e.preventDefault() /* a 태그의 href를 작동 시키지 않음 */
+			$(this).parents('li').toggleClass('open')
+		}
+	})
 
 
 	/************************************ header 와 메뉴 : 종료 ************************************/
