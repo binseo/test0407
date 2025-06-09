@@ -73,9 +73,12 @@ $(document).ready(function(){
 		$(this).removeClass('over')
 	})
 
-	// ### $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child') 해야함 ####
+	
+	$('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child').on('focusout', function(){
+		$('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+	})
 
-
+	// ### 모바일 gnb_open 해야함 ####
 
 
 	/************************************ header 와 메뉴 : 종료 ************************************/

@@ -11,9 +11,6 @@
 
 
 
-/* ################ header css 해야함 / js도  ############## */
-
-
 
 header {
     position: fixed;
@@ -182,7 +179,110 @@ header.fixed .logo a {
 
 /* ###################### header 모바일과 pc 모바일 js 해야함!!!! ##################### */
 
-@media screen and (max-width:1024px) { /* 모바일 */
+@media screen and (max-width:1024px) { /*############## 모바일 ############*/
+    header {
+        height: 56px;
+        border-bottom: 0;
+        padding: 0 0 0 20px;
+    }
+    header .logo a {
+        width: 95px;
+        height: 23px;
+    }
+
+    /* ###################### header .gnb .gnb_open 해야함!!!! ##################### */
+    header .gnb .gnb_open,
+    header .gnb .gnb_close { 
+        display: none;
+    }
+
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        position: relative; /* 2차 메뉴 depth2 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        font-family: "TJJoyofsingingBTTF";
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 20px;
+        padding: 0 22.5px;
+        line-height: 100px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a > span {
+        display: block;
+        padding-right: 18px;
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a > span::after {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 45px;
+        width: 15px;
+        height: 8px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99996 6.33711L13.5125 0.82461C13.7 0.63711 13.9187 0.546484 14.1687 0.552734C14.4187 0.558984 14.6375 0.655859 14.825 0.843359C15.0125 1.03086 15.1062 1.24961 15.1062 1.49961C15.1062 1.74961 15.0125 1.96836 14.825 2.15586L9.06871 7.93086C8.91871 8.08086 8.74996 8.19336 8.56246 8.26836C8.37496 8.34336 8.18746 8.38086 7.99996 8.38086C7.81246 8.38086 7.62496 8.34336 7.43746 8.26836C7.24996 8.19336 7.08121 8.08086 6.93121 7.93086L1.15621 2.15586C0.968711 1.96836 0.878086 1.74648 0.884336 1.49023C0.890586 1.23398 0.987461 1.01211 1.17496 0.82461C1.36246 0.63711 1.58121 0.54336 1.83121 0.54336C2.08121 0.54336 2.29996 0.63711 2.48746 0.82461L7.99996 6.33711Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 84px;
+        background-color: #20AFA1;
+        color: #fff;
+        border-radius: 30px;
+        padding: 0 20px;
+        display: none;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+        display: block;
+        white-space: nowrap; /* 줄바꿈 금지 */
+        padding: 20px 20px 18px 20px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a[target="_blank"] > span {
+        display: block;
+        padding-right: 25px;
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a[target="_blank"] > span::before {
+        content: "";
+        position: absolute;
+        right: 3px;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_33_1420' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_33_1420)'%3E%3Cpath d='M4.42296 17.0827C4.00199 17.0827 3.64567 16.9368 3.354 16.6452C3.06234 16.3535 2.9165 15.9972 2.9165 15.5762V4.42247C2.9165 4.0015 3.06234 3.64518 3.354 3.35352C3.64567 3.06185 4.00199 2.91602 4.42296 2.91602H9.67921V4.16602H4.42296C4.3588 4.16602 4.30005 4.19275 4.24671 4.24622C4.19324 4.29956 4.1665 4.35831 4.1665 4.42247V15.5762C4.1665 15.6404 4.19324 15.6991 4.24671 15.7525C4.30005 15.8059 4.3588 15.8327 4.42296 15.8327H15.5767C15.6409 15.8327 15.6996 15.8059 15.753 15.7525C15.8064 15.6991 15.8332 15.6404 15.8332 15.5762V10.32H17.0832V15.5762C17.0832 15.9972 16.9373 16.3535 16.6457 16.6452C16.354 16.9368 15.9977 17.0827 15.5767 17.0827H4.42296ZM8.09921 12.7781L7.22109 11.9L14.955 4.16602H11.6665V2.91602H17.0832V8.33268H15.8332V5.04414L8.09921 12.7781Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a > span {
+        display: block;
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a:hover > span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+    }
+
+
+    header .util .search .search_open {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_33_961' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_33_961)'%3E%3Cpath d='M11.875 20C9.60417 20 7.68229 19.2135 6.10938 17.6406C4.53646 16.0677 3.75 14.1458 3.75 11.875C3.75 9.60417 4.53646 7.68229 6.10938 6.10938C7.68229 4.53646 9.60417 3.75 11.875 3.75C14.1458 3.75 16.0677 4.53646 17.6406 6.10938C19.2135 7.68229 20 9.60417 20 11.875C20 12.7917 19.8542 13.6562 19.5625 14.4688C19.2708 15.2812 18.875 16 18.375 16.625L25.375 23.625C25.6042 23.8542 25.7188 24.1458 25.7188 24.5C25.7188 24.8542 25.6042 25.1458 25.375 25.375C25.1458 25.6042 24.8542 25.7188 24.5 25.7188C24.1458 25.7188 23.8542 25.6042 23.625 25.375L16.625 18.375C16 18.875 15.2812 19.2708 14.4688 19.5625C13.6562 19.8542 12.7917 20 11.875 20ZM11.875 17.5C13.4375 17.5 14.7656 16.9531 15.8594 15.8594C16.9531 14.7656 17.5 13.4375 17.5 11.875C17.5 10.3125 16.9531 8.98438 15.8594 7.89062C14.7656 6.79688 13.4375 6.25 11.875 6.25C10.3125 6.25 8.98438 6.79688 7.89062 7.89062C6.79688 8.98438 6.25 10.3125 6.25 11.875C6.25 13.4375 6.79688 14.7656 7.89062 15.8594C8.98438 16.9531 10.3125 17.5 11.875 17.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
 
 }
 
