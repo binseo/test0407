@@ -464,12 +464,50 @@ header.fixed .logo a {
 }
 
 
-/* ###################### .find .list .tab_contents .tab_item > ul 해야함!!!! js도 ##################### */
 
+.find .list .tab_contents .tab_item > ul {
+    display: flex;
+    justify-content: space-between;
+}
 
+.find .list .tab_contents .tab_item > ul > li {
+    width: calc(25% - 18px);
+}
+.find .list .tab_contents .tab_item > ul > li > a {
+    display: block;
+}
+.find .list .tab_contents .tab_item > ul > li > a .photo {
+    overflow: hidden;
+    height: 350px;
+    border-radius: 30px;
+}
+.find .list .tab_contents .tab_item > ul > li > a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+/* 마우스를 오버 효과  ???????????????????
+.find .list .tab_contents .tab_item > ul > li > a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+    /* animation-name: img_hover;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
 
+/* @keyframes img_hover { 애니메이션은 아웃할 때 부드럽지 않다.
+    0% { transform: scale3d(1,1,1); }
+    100% { transform: scale3d(1.2,1.2,1); }
+} */
 
+.find .list .tab_contents .tab_item > ul > li > a .subject {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0 10px 0;
+}
+
+/* ############ .find .list .tab_contents .tab_item > ul > li > a .subject strong  해야함!!!! ############ */
 
 
 footer {
