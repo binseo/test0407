@@ -409,10 +409,62 @@ header.fixed .logo a {
 }
 
 
-/* ###################### find 전체 다 해야함!!!! ##################### */
 
 
+.find {
+    padding: 170px 0 135px 0;
+    background-color: #36342F;
+    color: #fff;
+    position: relative; /* ?????????? */
+}
 
+.find .tit h2 {
+    font-size: 45px;
+    text-align: center;
+}
+.find .list {
+    margin: 30px 0 0 0;
+}
+
+.find .list .tab_list ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.find .list .tab_list ul li button {
+    font-family: "TJJoyofsingingBTTF";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 25px;
+    padding: 13px 27px 10px 27px;
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.6);
+    background-color: transparent;
+}
+.find .list .tab_list ul li.item1.active button {
+    background-color: #20AFA1;
+    color: #fff;
+    border: none;
+}
+.find .list .tab_list ul li.item2.active button {
+    background-color: #008944;
+    color: #fff;
+    border: none;
+}
+
+.find .list .tab_contents {
+    margin: 50px 0 0 0;
+}
+.find .list .tab_contents .tab_item {
+    display: none;
+}
+.find .list .tab_contents .tab_item.active {
+    display: block;
+}
+
+
+/* ###################### .find .list .tab_contents .tab_item > ul 해야함!!!! js도 ##################### */
 
 
 

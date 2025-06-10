@@ -105,11 +105,210 @@
                                      data-content는 내맘대로 속성을 추가.. (값을 저장할 공간이 필요해서 - 표준위배)
                                      data-link 라던가.. data-value 이렇게 data가 들어간 속성은 퍼블이 만든 속성 -->
                                      
-                                <li><button><span>가족을</span></button></li>
-                                <li><button><span>주인을</span></button></li>
+                                <li role="tab" aria-selected="true" class="item1 active" data-content="tab_item1"><button><span>가족을</span></button></li>
+                                <li role="tab" aria-selected="false" class="item2" data-content="tab_item2"><button><span>주인을</span></button></li>
                             </ul>
-                        </div>
-                    </div>
+                        </div><!--tab_list-->
+                        <div class="tab_contents">
+                            <!-- 가족을, 주인을 탭 콘텐츠를 구분 item1/item2로 클래스명 구분
+                                 현재 선택된 탭 콘텐츠는 active 클래스 추가 -->
+                            <div class="tab_item item1 active" id="tab_item1">
+                                <h3 class="blind">가족을 찾습니다</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find01.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>스텐다드 푸들</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 수원시 권선구 스타벅스 수원탑동DT점 근처 논밭</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-5-20</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>미용한지 얼마 안지나 몸털이 짧음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find02.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_end">종료</strong>
+                                                <h4>브리티시 쇼트헤어</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 고양시 덕양구 원흥동 426-6 집에서 가출, 원흥동 유진민속박물관 부근</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-05</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>회색 휜색 섞인 털을 가지고 있고 눈은 호박색입니다 최근에 털을 다 밀어서 몸전체에 털이 짧아보입니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find03.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>말티즈</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>전라북도 부안군 가력도항</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-04</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>정말 작아요. 순하고 정말 하얘요. 자주 헥헥거리고 사람을 잘 따라요.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find04.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>앵무새</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 서초구 양재동 온누리교회 인근</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-04-24</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>사람 어깨에 앉거나 핸드폰 위에 잘 앉아요.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <!--tab_item1-->
+
+                            <div class="tab_item item2" id="tab_item2">
+                                <h3 class="blind">주인을 찾습니다</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find05.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_see">목격</strong>
+                                                <h4>조류(사랑앵무)</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 용산구 효창공원앞역 롯데캐슬 102동 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-04-06</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 하네스 발목링 없고 사람 손을 탑니다. 윙트리밍 안되어있습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find06.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_end">종료</strong>
+                                                <h4>골든 리트리버</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 파주시 경기도 파주시 오금리미곡처리장이 보이는 만우천</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-16</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>털 색깔도 갈색과 흰색이 섞여있고, 다리도 웰 시보다 긴편입니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find07.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_care">구조</strong>
+                                                <h4>포메라니언</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>광주광역시 광산구 광산구 송촌동148-5 집앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-09</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>흰색에 몸통만 털이 짧게 깍았어요.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find08.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_see">목격</strong>
+                                                <h4>믹스묘</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>전라북도 김제시 죽산면 명마마을</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-15</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>흰색고양이며 얼굴 양쪽이 털이 많지않아 분홍색이 세로줄처럼 보입니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <!--tab_item item2-->
+                        </div> <!--tab_contents-->
+                    </div><!--list-->
                 </div>
             </section><!--find-->
             <section class="slogan"></section><!--slogan-->
