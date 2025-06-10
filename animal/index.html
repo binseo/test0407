@@ -91,7 +91,25 @@
                 </div><!--swiper-->
             </section><!--visual-->
             <section class="find">
-                
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2 class="tit_font">찾습니다</h2>
+                    </div>
+                    <div class="list">
+                        <div class="tab_list">
+                            <ul role="tablist">
+                                <!-- 선택된 li에는 active 클래스 추가, button에 선택됨이라고 써줌
+                                     aria-selected가 true가 선택된 것 false 선택이 안된 것
+                                     data-content li를 눌렀을 때 나타날 탭 콘텐츠 id값
+                                     li를 클릭했을 때 data-content 값을 호출해서 id가 같은 요소만 보이게 함
+                                     data-content는 내맘대로 속성을 추가.. (값을 저장할 공간이 필요해서 - 표준위배)
+                                     data-link 라던가.. data-value 이렇게 data가 들어간 속성은 퍼블이 만든 속성 -->
+                                <li><button><span>가족을</span></button></li>
+                                <li><button><span>주인을</span></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section><!--find-->
             <section class="slogan"></section><!--slogan-->
             <section class="adopt"></section><!--adopt-->
