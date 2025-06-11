@@ -415,7 +415,7 @@ header.fixed .logo a {
     padding: 170px 0 135px 0;
     background-color: #36342F;
     color: #fff;
-    position: relative; /* ?????????? */
+    position: relative; /* emblem */
 }
 
 .find .tit h2 {
@@ -507,7 +507,212 @@ header.fixed .logo a {
     margin: 20px 0 10px 0;
 }
 
-/* ############ .find .list .tab_contents .tab_item > ul > li > a .subject strong  해야함!!!! ############ */
+.find .list .tab_contents .tab_item > ul > li > a .subject strong {
+    font-family: "TJJoyofsingingBTTF";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 15px;
+    padding: 7px 15px 5px 15px;
+    border-radius: 40px;
+    white-space: nowrap;
+    background-color: #20AFA1;
+}
+.find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_lost {
+    background-color: #20AFA1;
+}
+.find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_end {
+    background-color: #767676;
+}
+.find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_see {
+    background-color: #008944;
+}
+.find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_care {
+    background-color: #95C24B;
+}
+
+.find .list .tab_contents .tab_item > ul > li > a .subject h4 {
+    font-family: "TJJoyofsingingBTTF";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 22px;
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.find .list .tab_contents .tab_item > ul > li > a ul.detail li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.find .list .tab_contents .tab_item > ul > li > a ul.detail li strong {
+    font-family: "TJJoyofsingingBTTF";
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.find .list .tab_contents .tab_item > ul > li > a ul.detail li span {
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.find .emblem {
+    position: absolute;
+    left: 20px;
+    top: -62px;
+    z-index: 3;
+    animation-name: rotate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite; /* 무제한 */
+    animation-timing-function: linear; /* 가속도 삭제 */
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width:1440px) {
+    .find .emblem {
+        display: none;
+    }
+} /* @media */
+
+@media screen and (max-width:1024px) {
+    .find {
+        padding: 130px 0 100px 0;
+    }
+    .find .tit h2 {
+        font-size: 35px;
+    }
+    .find .list .tab_list ul li button {
+        font-size: 20px;
+    }
+
+    .find .list .tab_contents .tab_item > ul {
+        gap: 30px 16px;
+        flex-wrap: wrap; /* 줄바꿈 허용 */
+    }
+    .find .list .tab_contents .tab_item > ul > li {
+        width: calc(50% - 8px);
+    }
+    .find .list .tab_contents .tab_item > ul > li > a .photo {
+        height: 250px;
+        border-radius: 20px;
+    }
+} /* @media */
+
+@media screen and (max-width:768px) {
+    .find {
+        padding: 100px 0 80px 0;
+        position: relative; /* emblem */
+    }
+    
+    .find .tit h2 {
+        font-size: 25px;
+    }   
+    .find .list {
+        margin: 20px 0 0 0;
+    }
+    
+    .find .list .tab_list ul {
+        gap: 10px;
+    }
+
+    .find .list .tab_list ul li button {
+        font-size: 18px;
+        padding: 10px 22px 8px 22px;
+    }
+    
+    .find .list .tab_contents {
+        margin: 40px 0 0 0;
+    }
+
+    .find .list .tab_contents .tab_item > ul > li > a .photo {
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    
+    .find .list .tab_contents .tab_item > ul > li > a .subject { 
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0 10px 0;
+    }
+    /* ############ .find .list .tab_contents .tab_item > ul > li > a .subject 모바일 해야함!!!! ############ */
+    
+    .find .list .tab_contents .tab_item > ul > li > a .subject strong {
+        font-family: "TJJoyofsingingBTTF";
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 15px;
+        padding: 7px 15px 5px 15px;
+        border-radius: 40px;
+        white-space: nowrap;
+        background-color: #20AFA1;
+    }
+    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_lost {
+        background-color: #20AFA1;
+    }
+    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_end {
+        background-color: #767676;
+    }
+    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_see {
+        background-color: #008944;
+    }
+    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_care {
+        background-color: #95C24B;
+    }
+    
+    .find .list .tab_contents .tab_item > ul > li > a .subject h4 {
+        font-family: "TJJoyofsingingBTTF";
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 22px;
+        /* 1줄 제한 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .find .list .tab_contents .tab_item > ul > li > a ul.detail li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .find .list .tab_contents .tab_item > ul > li > a ul.detail li strong {
+        font-family: "TJJoyofsingingBTTF";
+        font-weight: 700;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+    .find .list .tab_contents .tab_item > ul > li > a ul.detail li span {
+        /* 1줄 제한 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .find .emblem {
+        position: absolute;
+        left: 20px;
+        top: -62px;
+        z-index: 3;
+        animation-name: rotate;
+        animation-duration: 6s;
+        animation-iteration-count: infinite; /* 무제한 */
+        animation-timing-function: linear; /* 가속도 삭제 */
+    }
+    
+} /* @media */
+
+
 
 
 footer {
