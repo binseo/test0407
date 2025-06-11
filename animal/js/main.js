@@ -111,7 +111,7 @@ $(document).ready(function(){
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
 	autoplay: {  /* 팝업 자동 실행 */
-		delay: 9000,
+		delay: 2500,
 		disableOnInteraction: true,
 	},
 
@@ -144,5 +144,49 @@ $(document).ready(function(){
 
     /************************************ visual swiper : 끝 ************************************/
 
+
+
+	/************************************ find 탭 기능 : 시작 ***********************************
+	 * 1. 클릭한 li에서 data-content 값을 가져와서
+	 *	==> tab_item 중에 해당 값이 id인 요소를 찾아서 나타나게 해야함 (다른 요소는 숨김)
+	 * 2. 클릭한 li에만 active 클래스 줌
+	 * 3. 클릭한 li안에 있는 span에 선택됨이라고 글자 써줌 (다른 li에 있는 건 삭제)
+	 * 4. 클릭한 li 속성 aria-selected 값을 true로 변경 (다른 li는 모두 false)
+	 * */
+
+	let find_cintent // 클릭한 메뉴의 이름(id)
+	$('.find .list .tab_list ul li').on('click', function(){
+		// console.log('누름!!!!!!!!!')
+		if($(this).hasClass('active') == false){
+			find_cintent = $(this).attr('data-content') // attr --> 속성 값을 가지고 오는 것
+			// console.log(find_cintent)
+			$('.find .list .tab_contents .tab_item').removeClass('active')
+			$('.find .list .tab_contents').find('#'+find_cintent).addClass('active')
+			// find는 자식을 선택하는 것 me/ 자기자신 아님
+			//1번 끝
+
+			//2번 시작
+			$('.find .list .tab_list ul li').removeClass('active')
+			$(this).addClass('active')
+			//2번 끝
+
+			//3번 시작
+			$('.find .list .tab_list ul li button span').text('')
+			$(this).find('span').text('선택됨')
+
+			$('.find .list .tab_list ul li').attr('aria-selected', 'false') //속성 값을 변경하는 방법
+			$(this).attr('aria-selected', 'true')
+		}
+	})
+
+	/************************************ find 탭 기능 : 끝 ************************************/
+
+
+
+	/************************************ adopt swiper : 시작 ************************************/
+
+
+
+	/************************************ adopt swiper : 끝 ************************************/
 
 })

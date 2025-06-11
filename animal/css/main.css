@@ -485,6 +485,10 @@ header.fixed .logo a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
+}
+.find .list .tab_contents .tab_item > ul > li > a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
 }
 
 /* 마우스를 오버 효과  ???????????????????
@@ -639,78 +643,155 @@ header.fixed .logo a {
 
     
     .find .list .tab_contents .tab_item > ul > li > a .subject { 
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin: 20px 0 10px 0;
+        display: block;
+        margin: 15px 0 5px 0;
+        position: relative; /* strong */
     }
-    /* ############ .find .list .tab_contents .tab_item > ul > li > a .subject 모바일 해야함!!!! ############ */
     
     .find .list .tab_contents .tab_item > ul > li > a .subject strong {
-        font-family: "TJJoyofsingingBTTF";
-        font-weight: 700;
-        line-height: 1.2;
-        font-size: 15px;
-        padding: 7px 15px 5px 15px;
-        border-radius: 40px;
-        white-space: nowrap;
-        background-color: #20AFA1;
-    }
-    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_lost {
-        background-color: #20AFA1;
-    }
-    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_end {
-        background-color: #767676;
-    }
-    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_see {
-        background-color: #008944;
-    }
-    .find .list .tab_contents .tab_item > ul > li > a .subject strong.cate_care {
-        background-color: #95C24B;
+        position: absolute;
+        left: 0;
+        top: -41px;
+        font-size: 14px;
+        padding: 6px 13px 4px 13px;
+        border-radius: 10px;
     }
     
     .find .list .tab_contents .tab_item > ul > li > a .subject h4 {
-        font-family: "TJJoyofsingingBTTF";
-        font-weight: 700;
-        line-height: 1.2;
-        font-size: 22px;
-        /* 1줄 제한 */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 18px;
     }
     
     .find .list .tab_contents .tab_item > ul > li > a ul.detail li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        display: block;
+    }
+    .find .list .tab_contents .tab_item > ul > li > a ul.detail li:last-child{
+        display: none;
     }
     
     .find .list .tab_contents .tab_item > ul > li > a ul.detail li strong {
-        font-family: "TJJoyofsingingBTTF";
-        font-weight: 700;
-        line-height: 1.2;
-        white-space: nowrap;
+        display: none;
     }
     .find .list .tab_contents .tab_item > ul > li > a ul.detail li span {
-        /* 1줄 제한 */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    .find .emblem {
-        position: absolute;
-        left: 20px;
-        top: -62px;
-        z-index: 3;
-        animation-name: rotate;
-        animation-duration: 6s;
-        animation-iteration-count: infinite; /* 무제한 */
-        animation-timing-function: linear; /* 가속도 삭제 */
+        display: block;
     }
     
 } /* @media */
+
+
+
+
+
+.slogan {
+    margin: 180px 0 0 0;
+}
+.slogan .sub_tit {
+    font-size: 60px;
+    line-height: 1.5;
+    color: #1d1d1d;
+    text-align: center;
+}
+.slogan .sub_tit strong {
+    display: inline-block;
+}
+.slogan .sub_tit span {
+    display: inline-block;
+    color: transparent;
+    position: relative; /* before */
+}
+.slogan .sub_tit span::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.slogan .sub_tit span.item1::before {
+    top: 30%;
+    width: 1.9em; /* 114/60 */
+    height: 1.4em; /* 84/60 */
+    background-image: url(../images/slogan01.png);
+}
+.slogan .sub_tit span.item2::before {
+    width: 2.37em; /* 142/60 */
+    height: 1.49em; /* 89/60 */
+    background-image: url(../images/slogan02.png);
+}
+.slogan .sub_tit span.item3::before {
+    width: 1.35em; /* 81/60 */
+    height: 2em; /* 120/60 */
+    background-image: url(../images/slogan03.png);
+}
+.slogan .sub_tit span.item4::before {
+    width: 1.79em; /* 107/60 */
+    height: 1.3em; /* 78/60 */
+    background-image: url(../images/slogan04.png);
+}
+
+.slogan .sub_tit span.item1 {
+    width: 2.29em; /* 137/60 */
+}
+.slogan .sub_tit span.item2 {
+    width: 2.87em; /* 172/60 */
+}
+.slogan .sub_tit span.item3 {
+    width: 1.72em; /* 103/60 */
+}
+.slogan .sub_tit span.item4 {
+    width: 1.84em; /* 103/60 */
+}
+
+.slogan .ex {
+    text-align: center;
+    margin: 60px 0 0 0;
+}
+
+@media screen and (max-width:1300px) {
+    .slogan .sub_tit {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .slogan {
+        margin: 100px 0 0 0;
+    }
+    .slogan .sub_tit {
+        font-size: 40px;
+    }
+    .slogan .ex {
+        text-align: center;
+        margin: 45px 0 0 0;
+    }
+    .slogan .ex br {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .slogan {
+        margin: 80px 0 0 0;
+    }
+    .slogan .sub_tit {
+        font-size: 30px;
+    }
+    .slogan .sub_tit br {
+        display: none; /* 줄바꿈 금지 */
+    }
+    .slogan .ex {
+        margin: 30px 0 0 0;
+    }
+}
+
+
+
+/* ############ adopt 해야함!!!! ############ */
+
+
+
 
 
 
