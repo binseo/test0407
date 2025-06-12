@@ -792,10 +792,11 @@ header.fixed .logo a {
 
 .adopt {
     margin: 180px 0 0 0;
-    padding: 180px 0 400px 0;
+    padding: 150px 0 250px 0;
     background-color: #36342F;
     color: #fff;
     text-align: center;
+    position: relative; /* rolling */
 }
 .adopt .tit h2 {
     font-size: 45px;
@@ -810,7 +811,183 @@ header.fixed .logo a {
 .adopt .list .swiper-slide a {
     display: block;
 }
-/* ############ .adopt .list .swiper-slide a .photo 해야함!!!! ############ */
+
+.adopt .list .swiper-slide a .photo {
+    overflow: hidden;
+    height: 300px;
+    border-radius: 50%;
+}
+.adopt .list .swiper-slide a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.adopt .list .swiper-slide a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.adopt .list .swiper-slide a strong {
+    font-family: "TJJoyofsingingBTTF";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 15px;
+    padding: 7px 15px 5px 15px;
+    background-color: #20AFA1;
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+    top: -17px;
+}
+.adopt .list .swiper-slide a strong.cate_care {
+    background-color: #95C24B;
+}
+.adopt .list .swiper-slide a h3 {
+    font-family: "TJJoyofsingingBTTF";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+.adopt .list .swiper-slide a p {
+    color: rgba(255,255,255,0.8);
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.adopt .list_ctrl {
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.adopt .list_ctrl button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.4338 6.38132L7.0383 10.9858C7.19491 11.1424 7.27061 11.3252 7.26539 11.534C7.26017 11.7428 7.17925 11.9255 7.02264 12.0821C6.86602 12.2387 6.6833 12.3171 6.47448 12.3171C6.26566 12.3171 6.08294 12.2387 5.92633 12.0821L1.10256 7.27403C0.97727 7.14874 0.8833 7.00778 0.820654 6.85117C0.758008 6.69455 0.726685 6.53794 0.726685 6.38132C0.726685 6.2247 0.758008 6.06809 0.820654 5.91147C0.8833 5.75486 0.97727 5.6139 1.10256 5.48861L5.92633 0.664845C6.08294 0.50823 6.26827 0.432532 6.48231 0.437753C6.69635 0.442973 6.88168 0.523891 7.0383 0.680507C7.19491 0.837123 7.27322 1.01984 7.27322 1.22866C7.27322 1.43748 7.19491 1.6202 7.0383 1.77682L2.4338 6.38132Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.adopt .list_ctrl button.btn_next {
+    transform: rotate(180deg);
+}
+.adopt .list_ctrl .more {
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 0 35px 0 17px;
+    position: relative;
+}
+.adopt .list_ctrl .more::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_33_1088' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_33_1088)'%3E%3Cpath d='M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.adopt .rolling {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 100%;
+}
+.adopt .rolling p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.2);
+    white-space: nowrap; /* 1줄 */
+    text-transform: uppercase; /* 영어 대문자 변경 */
+
+    animation-name: rolling;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /* 가속도 삭제 */
+}
+@keyframes rolling {
+    0%{ left: 0; }
+    100% { left: -14.45em; }
+}
+
+
+@media screen and (max-width:768px) {
+    .adopt {
+        margin: 100px 0 0 0;
+        padding: 90px 0 150px 0;
+    }
+    .adopt .tit h2 {
+        font-size: 25px;
+    }
+    
+    .adopt .list {
+        margin-top: 40px;
+    }
+    .adopt .list .swiper {
+        padding-left: 16px;
+    }
+    .adopt .list .swiper-slide {
+        width: 240px;
+    }
+    .adopt .list .swiper-slide a .photo {
+        height: 240px;
+    }
+
+    .adopt .list .swiper-slide a strong {
+        font-size: 14px;
+        padding: 6px 13px 3px 13px;
+    }
+
+    .adopt .list .swiper-slide a h3 {
+        font-size: 18px;
+    }
+
+    .adopt .list_ctrl {
+        margin: 50px 0 0 0;
+    }
+    .adopt .list_ctrl button {
+        display: none;
+    }
+    
+    .adopt .rolling {
+        bottom: 20px;
+    }
+    .adopt .rolling p {
+        font-size: 50px;
+    }
+}
+
+.review {
+    margin: 180px 0 0 0;
+}
+.review .wrapper {
+    position: relative; /* more */
+}
+.review .tit h2 {
+    font-size: 45px;
+    color: #1d1d1d;
+
+    position: relative; /* after */
+}
+/* ############ .review .tit h2::after 해야함!!!! ############ */
+
+
+
+.review .list {
+    margin: 60px 0 0 0;
+}
 
 
 
