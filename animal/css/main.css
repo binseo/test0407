@@ -788,10 +788,29 @@ header.fixed .logo a {
 
 
 
-/* ############ adopt 해야함!!!! ############ */
 
 
+.adopt {
+    margin: 180px 0 0 0;
+    padding: 180px 0 400px 0;
+    background-color: #36342F;
+    color: #fff;
+    text-align: center;
+}
+.adopt .tit h2 {
+    font-size: 45px;
+}
 
+.adopt .list {
+    margin-top: 80px;
+}
+.adopt .list .swiper-slide {
+    width: 300px;
+}
+.adopt .list .swiper-slide a {
+    display: block;
+}
+/* ############ .adopt .list .swiper-slide a .photo 해야함!!!! ############ */
 
 
 
