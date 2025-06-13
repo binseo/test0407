@@ -978,17 +978,87 @@ header.fixed .logo a {
 .review .tit h2 {
     font-size: 45px;
     color: #1d1d1d;
+    padding: 0 0 40px 0;
 
     position: relative; /* after */
 }
-/* ############ .review .tit h2::after 해야함!!!! ############ */
 
+.review .tit h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #ededed;
+}
+.review .tit h2 strong {
+    position: relative;
+}
+.review .tit h2 strong::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -44px;
+    z-index: 1;
+    width: 100%;
+    height: 3px;
+    background-color: #20AFA1;
+}
 
 
 .review .list {
     margin: 60px 0 0 0;
+    position: relative; /* btn_prev  btn_next */
+}
+.review .list .swiper-slide a {
+    display: block;
+}
+.review .list .swiper-slide a .photo {
+    overflow: hidden;
+    height: 300px;
+}
+.review .list .swiper-slide a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.review .list .swiper-slide a h3 {
+    font-family: "TJJoyofsingingBTTF";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 22px;
+    color: #1d1d1d;
+    margin: 20px 0 10px 0;
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.review .list .swiper-slide a p {
+    height: 3em;
+    overflow: hidden;
+}
+.review .list .btn_prev,
+.review .list .btn_next {
+    position: absolute;
+    top: 120px;
+    width: 30px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='60' viewBox='0 0 30 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_33_1128' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='60'%3E%3Crect width='30' height='60' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_33_1128)'%3E%3Cpath d='M5.6659 29.9967L18.982 43.3128C19.3332 43.664 19.5044 44.0775 19.4956 44.5534C19.4865 45.0295 19.3063 45.4431 18.9551 45.7943C18.6036 46.1455 18.1899 46.3211 17.7141 46.3211C17.2383 46.3211 16.8246 46.1455 16.4731 45.7943L2.9126 32.2608C2.59293 31.9411 2.35605 31.583 2.20196 31.1864C2.04787 30.7898 1.97083 30.3933 1.97083 29.9967C1.97083 29.6001 2.04787 29.2036 2.20196 28.807C2.35605 28.4104 2.59293 28.0523 2.9126 27.7326L16.4731 14.1716C16.8246 13.8204 17.2429 13.6494 17.7278 13.6586C18.2128 13.6677 18.6309 13.8478 18.982 14.199C19.3332 14.5502 19.5088 14.9639 19.5088 15.44C19.5088 15.9158 19.3332 16.3294 18.982 16.6805L5.6659 29.9967Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.review .list .btn_prev {
+    left: -50px;
+}
+.review .list .btn_next {
+    right: -50px;
+    transform: rotate(180deg);
 }
 
+/* ############ .review .more 해야함!!!! ############ */
 
 
 
