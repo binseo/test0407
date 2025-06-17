@@ -239,6 +239,13 @@ $(document).ready(function(){
 
 	/************************************ footer top 버튼 :: 시작 ************************************/
 
+	$('footer .top').on('click', function(){
+		// console.log('클릭')
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500)
+	})
+
 	/************************************ footer top 버튼 ::  끝 ************************************/
 
-})
+})//$(document).ready
