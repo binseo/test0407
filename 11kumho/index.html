@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jquery 라이브러리 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- swiper 라이브러리 -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- aos 애니메이션 라이브러리 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+    <title>금호건설</title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 
+            고정될 때 fixed
+            메뉴가 상단으로 사라질 때 gnb_up
+            pc버전에서 메뉴에 마우스를 오버하면 menu_over
+            mobile버전에서 메뉴를 클릭하면 menu_open
+        -->
+        <header class="">
+            <h1 class="logo"><a href="index.html"><span class="blind">금호건설</span></a></h1>
+            <nav class="gnb">
+                <button class="gnb_open"><span class="blind">메뉴열기</span></button>
+                <div class="gnb_wrap">
+                    <div class="gnb_util">
+                        <div class="lang">
+                            <button class="lang_open"><span>KR</span></button>
+                        </div><!--lang-->
+                        <div class="search">
+                            <button class="search_open"><span class="blind">검색 열기</span></button>
+                        </div><!--search-->
+                    </div><!--gnb_util-->
+                    <ul class="depth1">
+                        <!-- pc버전에서 over클래스추가, 모바일에서는 open클래스 추가 -->
+                        <li class="">
+                            <!-- 1차 메뉴는 첫번 째 하위 메뉴로 이동 -->
+                            <a href="contents/info.html"><span>회사소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/info.html"><span>기업정보</span></a></li>
+                                <li><a href="contents/ceo.html"><span>CEO인사말</span></a></li>
+                                <li><a href="contents/history.html"><span>연혁</span></a></li>
+                                <li><a href="contents/org.html"><span>조직도</span></a></li>
+                                <li><a href="contents/tech.html"><span>기술혁신</span></a></li>
+                                <li><a href="contents/map.html"><span>찾아오시는길</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/esg01.html"><span>ESG</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/esg01.html"><span>윤리경영</span></a></li>
+                                <li><a href="contents/esg02.html"><span>품질경영</span></a></li>
+                                <li><a href="contents/esg03.html"><span>안전경영</span></a></li>
+                                <li><a href="contents/esg04.html"><span>환경경영</span></a></li>
+                                <li><a href="contents/esg05.html"><span>상생경영</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/biz01.html"><span>사업분야</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/biz01.html"><span>건축사업</span></a></li>
+                                <li><a href="contents/biz02.html"><span>토목사업</span></a></li>
+                                <li><a href="contents/biz03.html"><span>주택사업</span></a></li>
+                                <li><a href="contents/biz04.html"><span>플랜트/환경사업</span></a></li>
+                                <li><a href="contents/biz05.html"><span>사업실적검색</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="contents/ir01.html"><span>IR</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/ir01.html"><span>기업지배구조</span></a></li>
+                                <li><a href="contents/ir02.html"><span>경영정보</span></a></li>
+                                <li><a href="contents/ir03.html"><span>재무정보</span></a></li>
+                                <li><a href="contents/ir04.html"><span>주가정보</span></a></li>
+                                <li><a href="contents/ir05.html"><span>IR Contact</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/notice.html"><span>홍보센터</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/notice.html"><span>금호뉴스</span></a></li>
+                                <li><a href="contents/news.html"><span>분양뉴스</span></a></li>
+                                <li><a href="contents/ci.html"><span>CI/BI</span></a></li>
+                                <li><a href="contents/pr.html"><span>PR갤러리</span></a></li>
+                                <li><a href="contents/kumho.html"><span>금호역사관</span></a></li>
+                                <li><a href="contents/emp.html"><span>채용가이드</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+                </div><!--gnb_wrap-->
+                <div class="gnb_bg"></div> <!--메뉴 아래 검은색-->
+            </nav>
+            <div class="util">
+                <div class="lang">
+                    <button class="lang_open"><span>KR</span></button>
+                </div><!--lang-->
+                <div class="search">
+                    <button class="search_open"><span class="blind">검색 열기</span></button>
+                </div><!--search-->
+            </div><!--util-->
+        </header>
+        <main class="container">
+            <section class="visual">
+                <h2 class="blind">팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual01.jpg" alt=""></div>
+                            <div class="txt_wrap">
+                                <div class="wrapper">
+                                    <div class="txt pc"><p>From Bridges to Skylines,</p></div>
+                                    <div class="txt pc"><p>We Shape the World</p></div>
+
+                                    <div class="txt mobile"><p>From Bridges to </p></div>
+                                    <div class="txt mobile"><p>Skylines, We Shape</p></div>
+                                    <div class="txt mobile"><p>the World</p></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual02.jpg" alt=""></div>
+                            <div class="txt_wrap">
+                                <div class="wrapper">
+                                    <div class="txt"><p>Designed for People,</p></div>
+                                    <div class="txt"><p>Built for Life</p></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual03.jpg" alt=""></div>
+                            <div class="txt_wrap">
+                                <div class="wrapper">
+                                    <div class="txt"><p>Inspired by Nature,</p></div>
+                                    <div class="txt"><p>Driven by Vision</p></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div><!--//swiper-->
+                <div class="ctrl_wrap">
+                    <button class="btn_prev"><span class="blind">이전팝업보기</span></button>
+                    <button class="btn_next"><span class="blind">다음팝업보기</span></button>
+                    <button class="btn_stop"><span class="blind">일시정지</span></button>
+                    <button class="btn_play"><span class="blind">재생</span></button>
+                </div>
+                <div class="scroll_down"><span>scroll down</span></div>
+            </section>
+            <section class="biz">
+                <div class="tit" data-aos="fade-up">
+                    <div class="wrapper">
+                        <strong>BUSINESS</strong>
+                        <h2>글로벌 넘버원에 도전합니다</h2>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <!-- 마우스를 오버하면 on클래스 추가 -->
+                        <li data-aos="fade-up">
+                            <a href="#" class="more"><span class="blind">자세히보기</span></a>
+                            <div class="photo"><img src="images/main/biz01.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>건축사업</strong>
+                                <h3>Architecture</h3>
+                                <a href="#">view more</a>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up">
+                            <a href="#" class="more"><span class="blind">자세히보기</span></a>
+                            <div class="photo"><img src="images/main/biz02.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>토목사업</strong>
+                                <h3>Civil</h3>
+                                <a href="#">view more</a>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up">
+                            <a href="#" class="more"><span class="blind">자세히보기</span></a>
+                            <div class="photo"><img src="images/main/biz03.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>주택사업</strong>
+                                <h3>Housing</h3>
+                                <a href="#">view more</a>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up">
+                            <a href="#" class="more"><span class="blind">자세히보기</span></a>
+                            <div class="photo"><img src="images/main/biz04.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>플랜트/환경사업</strong>
+                                <h3>Plant<br> Enviroment</h3>
+                                <a href="#">view more</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="news">
+                <div class="tit" data-aos="fade-up">
+                    <div class="wrapper">
+                        <strong>NEW</strong>
+                        <h2>고객의 곁에 함께합니다</h2>
+                    </div>
+                </div>
+                <div class="list" data-aos="fade-up">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <span class="date">2025.05.22</span>
+                                    <h3>금호건설, ‘청주테크노폴리스 아테라 2차’ 완판</h3>
+                                    <p>충북 청주시 흥덕구 문암동 청주테크노폴리스 A7블록에 공급한 '청주테크노폴리스 아테라 2차'의 조기 완판에 성공했다고 22일 밝혔다. 지난해 1450가구가 조기 마감된 '청주테크노폴리스 아테라'에 이은 브랜드 성과다.</p>
+                                    <div class="photo"><img src="images/main/news01.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <span class="date">2025.05.15</span>
+                                    <h3>금호건설, 1분기 영업익 57억원…2개 분기 연속 흑자</h3>
+                                    <p>금호건설 관계자는 "작년 동기 대비 매출이 소폭 감소했지만 지난해 4분기(영업이익 55억원)에 이어 2개 분기 연속 영업이익 흑자를 냈다"며 "올해 2분기부터는 더 가파른 이익 증가 기조가 이어질 것"이라고 말했다.</p>
+                                    <div class="photo"><img src="images/main/news02.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <span class="date">2025.05.08</span>
+                                    <h3>금호건설, 캄보디아 타크마우시 하수처리시설 착공</h3>
+                                    <p>이 지역은 생활 하수와 빗물이 함께 배출되는 합류식 하수 시스템을 이용하고 있어 우기철이면 생활 하수와 빗물이 섞여 넘치는 일이 반복됐다. 이번 사업이 완료되면 우기에 효과적인 빗물 배출이 가능해지고, 체계적인 하수처리 시스템이 도입돼 생활환경과 공중 보건 수준이 크게 향상될 것으로 기대된다.</p>
+                                    <div class="photo"><img src="images/main/news03.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <span class="date">2025.05.04</span>
+                                    <h3>‘안전보건’의 의미를 새롭게...금호건설 공감토론회 개최</h3>
+                                    <p>금호건설 관계자는 “이번 공감토론회는 금호건설의 안전을 책임지는 주요 구성원들이 ‘안전보건을 다시 정의하다’는 의지를 가지고 참여한 뜻 깊은 자리였다”며 “토론회에서 논의된 다양한 의견을 바탕으로 안전보건을 새롭게 정의하고, 이를 정책에 적극 반영해 금호건설만의 안전문화를 굳건히 정착시켜 나가겠다”고 말했다.</p>
+                                    <div class="photo"><img src="images/main/news04.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <span class="date">2025.04.24</span>
+                                    <h3>금호건설, 초록우산에 결식아동 지원 후원금 1000만원 전달</h3>
+                                    <p>금호건설은 국내를 넘어 해외에서도 적극적인 나눔 활동을 펼치고 있다. 올해에는 경남·경북 지역 산불 피해를 입은 협력사 직원을 위한 긴급 지원과 미얀마 지진 피해 복구를 위한 후원금 기탁 등 국내외 긴급재난 상황에 적극 대응하며 기업의 사회적 책임을 실천하고 있다.</p>
+                                    <div class="photo"><img src="images/main/news05.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <span class="date">2025.04.22</span>
+                                    <h3>금호건설, 미얀마 지진 피해 지원‥"외국인 근로자와 연대 강화"</h3>
+                                    <p>금호건설은 단순한 금전적 기부를 넘어, 국내 건설 현장에서 근무하는 미얀마 국적 근로자들에게 위로와 응원의 메시지를 전했다. 전국 11개 건설 현장에 “우리는 미얀마 국민과 함께합니다. 평화와 빠른 회복을 기원합니다”라는 문구가 담긴 현수막을 미얀마어와 영어로 제작해 설치했다.</p>
+                                    <div class="photo"><img src="images/main/news06.jpg" alt=""></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--swiper-->
+                </div><!--list-->
+                <div class="ctrl_wrap">
+                    <div class="wrapper">
+                        <div class="group1">
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <div class="group2">
+                            <div class="count"></div><!--count-->
+                            <button class="btn_prev"><span class="blind">이전팝업보기</span></button>
+                            <button class="btn_next"><span class="blind">다음팝업보기</span></button>
+                            <a href="#" class="more">view all</a>
+                        </div>
+                    </div>
+                </div><!--ctrl_wrap-->
+            </section>
+            <section class="service">
+                <div class="tit" data-aos="fade-up">
+                    <div class="wrapper">
+                        <strong>KUMHO</strong>
+                        <h2>아름다운 미래를 건설합니다</h2>
+                    </div>
+                    <div class="list" data-bg="" data-aos="fade-up">
+                        <div class="blind">
+                            <!-- 마우스를 오버할 때 배경이 변하는 효과를 주면
+                                 그 배경을 미리 html에 코딩되어 있어야
+                                 미리 로딩되어서 오버 시 깜빡거리는 현상이 일어나지 않음 -->
+                            <img src="images/main/service02.jpg" alt="">
+                            <img src="images/main/service03.jpg" alt="">
+                            <img src="images/main/service04.jpg" alt="">
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#" data-name="bg1" data-aos="fade-up" data-aos-delay="300">
+                                    <h3>금호건설TV</h3>
+                                    <p>금호건설 공식 유튜브 채널<br> #건설 에 관심 있으신 #취준생 여러분</p>
+                                    <span class="more">view more</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-name="bg2" data-aos="fade-up" data-aos-delay="500">
+                                    <h3>아테라</h3>
+                                    <p>아름다운 일상의 공간<br> 당신의 삶을 비추는 아름다움</p>
+                                    <span class="more">view more</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-name="bg3" data-aos="fade-up" data-aos-delay="700">
+                                    <h3>인재채용</h3>
+                                    <p>우리는 당신의 성장과<br> 성공을 함께 만들어갑니다</p>
+                                    <span class="more">view more</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <button class="top">TOP</button>
+                <div class="family_site">
+                    <button class="famliy_open" title="열기">그룹사 바로가기</button>
+                    <ul>
+                        <li><a href="#">금호고속</a></li>
+                        <li><a href="#">U ·square</a></li>
+                        <li><a href="#">금호문화재단</a></li>
+                    </ul>
+                </div><!--family_site-->
+                <div class="group">
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="#">제보실</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">OB사랑방</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_info">
+                        <address>서울시 종로구 우정국로 26 센트로폴리스 A동</address>
+                        <span>사업자등록번호  104-81-31309</span>
+                        <span>A/S콜센터 080-000-0082</span>
+                    </div>
+                    <div class="copyright">© KUMHO ENGINEERING & CONSTRUCTION. ALL RIGHTS RESERVED.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

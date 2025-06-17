@@ -1,0 +1,47 @@
+/* 태그별로 브라우저에서 기본스타일을 줌
+그걸 모두 삭제하고 body에서 선언한 글자 스타일 대로만 적용
+여백,동그라미 삭제 */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; /* inherit은 브라우저에서 주는 값 삭제 */
+    font-weight: inherit;
+}
+strong, th {
+    font-weight: inherit; 
+}
+em, address {
+    font-style: normal; /* 기울임 삭제 (일반으로 돌리기) */
+}
+li {
+    list-style: none; /* 동그라미 삭제 */
+}
+a {
+    color: inherit; /* 브라우저에서 준 컬러 삭제 */
+    text-decoration: none; /* 밑줄 삭제 */
+}
+button, input[type="button"], input[type="submit"] {
+    border: none; /* 0은 두께를 0으로 두라 / none은 아예 삭제*/
+    background-color: transparent;
+    background: none;
+    cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
+    text-align: left;
+}
+select, input, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+fieldset {
+    border: 0;
+}
+legend, caption {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 사이즈 변동 안되게, 고정용 */
+}
