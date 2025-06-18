@@ -50,4 +50,83 @@
     transform: translateY(0);
 }
 
-/* ############# .visual .ctrl_wrap 해야함 ############## */
+
+.visual .ctrl_wrap {
+    position: absolute;
+    left: calc(50% - 630px);
+    bottom: 30.6%; /* 306/10 */
+    z-index: 10;
+    display: flex;
+    gap: 5px;
+}
+.visual .ctrl_wrap button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.visual .ctrl_wrap button.btn_prev {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_37_887' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='12' height='23'%3E%3Crect width='11.25' height='22.5' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37_887)'%3E%3Cpath d='M2.12491 11.249L7.11847 16.2426C7.25017 16.3743 7.31436 16.5293 7.31104 16.7078C7.30762 16.8863 7.24006 17.0414 7.10836 17.1731C6.97655 17.3048 6.82143 17.3707 6.64299 17.3707C6.46456 17.3707 6.30944 17.3048 6.17763 17.1731L1.09242 12.098C0.972548 11.9782 0.883718 11.8439 0.825934 11.6951C0.76815 11.5464 0.739258 11.3977 0.739258 11.249C0.739258 11.1003 0.76815 10.9516 0.825934 10.8029C0.883718 10.6542 0.972548 10.5199 1.09242 10.4L6.17763 5.31461C6.30944 5.18291 6.46627 5.11878 6.64813 5.1222C6.82999 5.12563 6.98677 5.19319 7.11847 5.32489C7.25017 5.45658 7.31602 5.61171 7.31602 5.79025C7.31602 5.96868 7.25017 6.12375 7.11847 6.25545L2.12491 11.249Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_next {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_37_892' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='12' height='23'%3E%3Crect width='11.25' height='22.5' transform='matrix(-1 0 0 1 11.25 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37_892)'%3E%3Cpath d='M9.12509 11.249L4.13153 16.2426C3.99983 16.3743 3.93564 16.5293 3.93896 16.7078C3.94238 16.8863 4.00994 17.0414 4.14164 17.1731C4.27345 17.3048 4.42857 17.3707 4.60701 17.3707C4.78544 17.3707 4.94056 17.3048 5.07237 17.1731L10.1576 12.098C10.2775 11.9782 10.3663 11.8439 10.4241 11.6951C10.4819 11.5464 10.5107 11.3977 10.5107 11.249C10.5107 11.1003 10.4819 10.9516 10.4241 10.8029C10.3663 10.6542 10.2775 10.5199 10.1576 10.4L5.07237 5.31461C4.94056 5.18291 4.78373 5.11878 4.60187 5.1222C4.42001 5.12563 4.26323 5.19319 4.13153 5.32489C3.99983 5.45658 3.93398 5.61171 3.93398 5.79025C3.93398 5.96868 3.99983 6.12375 4.13153 6.25545L9.12509 11.249Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_stop {
+    margin-left: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_37_882' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37_882)'%3E%3Cpath d='M11.6667 15.8327V4.16602H15V15.8327H11.6667ZM5 15.8327V4.16602H8.33333V15.8327H5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_play {
+    display: none;
+    margin-left: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_244_2' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='0' width='21' height='20'%3E%3Crect width='20' height='20' transform='matrix(-1 0 0 1 19.998 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_244_2)'%3E%3Cpath d='M6.66439 15.8337L15.8311 10.0003L6.66439 4.16699V15.8337Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .scroll_down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6.5%;
+    z-index: 10;
+    color: #fff;
+    font-size: 20px;
+}
+.visual .scroll_down::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 30px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='15' viewBox='0 0 30 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_37_853' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='15'%3E%3Crect y='15' width='15' height='30' transform='rotate(-90 0 15)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37_853)'%3E%3Cpath d='M14.9983 12.1671L21.6564 5.50904C21.832 5.33344 22.0388 5.24785 22.2767 5.25227C22.5147 5.25683 22.7216 5.34692 22.8972 5.52251C23.0728 5.69826 23.1606 5.90509 23.1606 6.143C23.1606 6.38091 23.0728 6.58774 22.8972 6.76349L16.1304 13.5438C15.9705 13.7036 15.7915 13.822 15.5932 13.8991C15.3949 13.9761 15.1966 14.0146 14.9983 14.0146C14.8001 14.0146 14.6018 13.9761 14.4035 13.8991C14.2052 13.822 14.0261 13.7036 13.8663 13.5438L7.08582 6.76349C6.91022 6.58774 6.82471 6.37863 6.82927 6.13615C6.83384 5.89367 6.92392 5.68463 7.09952 5.50904C7.27512 5.33344 7.48195 5.24564 7.72001 5.24564C7.95792 5.24564 8.16468 5.33344 8.34027 5.50904L14.9983 12.1671Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    
+    animation-name: scroll_down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes scroll_down {
+    0% { bottom: -20px; }
+    50% { bottom: -35px; }
+    100% { bottom: -20px; }
+}
+
+@media screen and (max-width:1300px) {
+    .visual .ctrl_wrap {
+        left: 20px; 
+        /* common.css에서 wrapper에
+         @media screen and (max-width:1300px){ /* 20 + 20 = 40 + 1260 = 1300
+            .wrapper {
+            width: auto;
+            margin: 0 20px;
+            }
+        } -> margin이 20px 이기 때문에 left를 20px을 준다 */
+    }
+}
+
+@media screen and (max-width:1024px) {
+    /* ############# 1024, 768 모바일 해야함 ############## */
+}

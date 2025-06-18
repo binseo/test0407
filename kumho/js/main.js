@@ -9,14 +9,14 @@ $(document).ready(function(){
         //     disableOnInteraction: true,
         // },
 
-        //effect: "fade", /* fade 효과 */
+        effect: "fade", /* fade 효과 */
 
         loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 
         
         navigation: {  /* 이전, 다음 버튼 */
-            nextEl: '.swiper-button-next',  /* 다음 버튼의 클래스명 */
-            prevEl: '.swiper-button-prev',  
+            nextEl: '.visual .ctrl_wrap button.btn_next',  /* 다음 버튼의 클래스명 */
+            prevEl: '.visual .ctrl_wrap button.btn_prev',  
         },
 
     });
