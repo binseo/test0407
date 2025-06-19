@@ -1,0 +1,9 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common_full.css);
+
+
+h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
