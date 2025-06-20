@@ -14,9 +14,76 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="wrapper">
-            
-        </div>
+        <section class="course" id="skip_content">
+            <div class="wrapper">
+                <div class="list">
+                    <div class="tit">
+                        <h2>테마별 여행 <br>추천 코스</h2>
+                    </div>
+                    <div class="tab_list">
+                        <ul role="tablist">
+                            <li role="tab" aria-selected="true" class="item1 active" data-content="tab_item1"><button>당일 코스</button><span class="blind">선택됨</span></li>
+                            <li role="tab" aria-selected="false" class="item2" data-content="tab_item2"><button>1박 2일 코스</button><span class="blind"></span></li>
+                            <li role="tab" aria-selected="false" class="item3" data-content="tab_item3"><button>2박 3일 코스</button><span class="blind"></span></li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents">
+                        <div class="tab_item item1 active" id="tab_item1">
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider01.jpg" alt="부여왕릉원"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider02.jpg" alt="국립부여박물관"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider03.jpg" alt="정림사지박물관"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider04.jpg" alt="부소산"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider05.jpg" alt="궁남지"></div>
+                                    </li>
+                                </ul>
+                                <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                            </div>
+                        </div>
+                        <div class="tab_item item2" id="tab_item2">
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider06.jpg" alt="부여왕릉원"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider07.jpg" alt="국립부여박물관"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider08.jpg" alt="정림사지박물관"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider09.jpg" alt="부소산"></div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="photo"><img src="images/slider10.jpg" alt="궁남지"></div>
+                                    </li>
+                                </ul>
+                                <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                            </div>
+                        </div>
+                        <div class="tab_item item3" id="tab_item3">
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide"></li>
+                                </ul>
+                                <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>

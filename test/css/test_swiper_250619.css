@@ -3,3 +3,57 @@
 @import url(common_full.css);
 
 
+
+
+
+
+
+.course {
+    margin: 1000px 0;
+    padding: 180px 0 120px 0;
+    background-color: #C5ECFF;
+}
+.course .wrapper {
+    position: relative; /* h2 */
+}
+.course .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+}
+.course .list {
+    display: block;
+}
+.course .list .tab_list {
+    width: calc(100% - 963px);
+}
+
+.course .list .tab_contents .tab_item {
+    width: 749px;
+    
+}
+
+.course .list .tab_contents .tab_item .swiper-slide .photo {
+    overflow: hidden;
+    height: 500px;
+}
+.course .list .tab_contents .tab_item .swiper-slide .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course .list .tab_contents .tab_item {
+    display: none; /* 숨김 */
+}
+.course .list .tab_contents .tab_item.active {
+    display: block; /* 나타남 */
+}
+
+
+
