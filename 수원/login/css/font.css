@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* 본고딕 S-CoreDream */
+@font-face{
+	font-family:'S-CoreDream';
+	font-weight: 400;
+	src:url("../font/S-CoreDream-4Regular.woff") format('woff');
+}
+@font-face{
+	font-family:'S-CoreDream';
+	font-weight: 500;
+	src:url("../font/S-CoreDream-5Medium.woff") format('woff');
+}
+@font-face{
+	font-family:'S-CoreDream';
+	font-weight: 600;
+	src:url("../font/S-CoreDream-6Bold.woff") format('woff');
+}
+
+@font-face {
+	font-family: 'HakgyoansimJiugaeR';
+	font-weight: 400;
+	src: url("../font/HakgyoansimJiugaeR.woff") format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	src: url("../font/Montserrat-Regular.woff") format('woff');
+}
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	src: url("../font/Montserrat-Bold.woff") format('woff');
+}
