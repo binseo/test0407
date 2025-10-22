@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* (주)한신정보기술 서채빈 - 2025.09.26 */
+body{position:relative;color:#444444;font-family:'S-CoreDream', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif;font-size:16px;font-weight:400;line-height:28px;letter-spacing:-0.02em;}
+
+/* 본문바로가기  */
+.accessibility{overflow:hidden;position:relative;z-index:1000;width:100%;}
+.accessibility a{display:block;overflow:hidden;width:1px;height:1px;margin:0 -1px -1px 0;font-size:0;line-height:0;text-align:center;}
+.accessibility a:focus,#accessibility a:hover,#accessibility a:active{width:auto;height:20px;margin:0;padding:8px 0 0 15px;background:#20262c;color:#fff;font-size:12px;font-weight:700;line-height:1;}
+:before,:after{display:none;content:'';}
+
+#wrapper{overflow:hidden;position:relative;min-width:1200px;}
+.wrap{position:relative;width:1200px;margin:0 auto;}
+.wrap1000{position:relative;width:1000px;margin:0 auto;}
+.wrap770{position:relative;width:770px;margin:0 auto;}
+.skip{overflow:hidden;}
+a:link{color:#333333;text-decoration:none;}
+a:visited{color:#333333;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:active{text-decoration:underline;}
+a span{cursor:pointer;}
+a:hover{text-decoration:underline;}
+button{font-family:'S-CoreDream', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif;cursor:pointer;}
+input{font-family:'S-CoreDream', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif;}
+input[type="submit"]{cursor:pointer;}
+
+/* web */
+@media screen and (max-width:1400px){
+#wrapper{min-width:1000px;}
+.wrap{width:1000px;}
+.wrap1000{width:1000px;}
+}
+@media screen and (max-width:1200px){
+#wrapper{min-width:1000px;}
+.wrap{width:1000px;}
+.wrap1000{width:900px;}
+}
+@media screen and (max-width:1000px){
+#wrapper{min-width:auto;}
+.wrap{width:94%;}
+.wrap1000{width:94%;}
+.wrap770{width:94%;}
+}
+@media screen and (max-width:640px){
+.wrap770{width:94%;}
+.wrap1000{width:auto;}
+}
