@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="수원특례시청">
+    <meta name="keywords" content="수원특례시청">
+    <meta name="description" content="수원특례시청">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:site_name" content="수원특례시청">
+    <meta property="og:url" content="https://www.suwon.go.kr/" />
+    <meta property="og:image" content="https://www.suwon.go.kr/resources/web/common/images/share_symbol.png" />
+    <meta property="og:title" content="수원특례시청" />
+    <meta property="og:description" content="[수원을 새롭게, 시민을 빛나게] 수원특례시의 주요소식, 시민참여, 행정서비스 안내" />
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" href="https://www.suwon.go.kr/favicon_200x200.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.suwon.go.kr/favicon.ico" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/jquery-1.12.4.HS-20200709.min.js"></script>
+    <script src="./js/jquery.screen.min.custom.1.0.2.js"></script>
+    <script src="./js/program.min.js"></script>
+    <script src="./js/login.js"></script>
+    <title>비영리단체회원 : HOME > 수원시 통합 회원 > 로그인 > 회원가입 > 비영리단체회원</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="accessibility">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <header id="header">
+            <div class="wrap">
+                <div class="top_link">
+                    <h1 class="logo">
+                        <img src="./images/login_top_logo.png" alt="수원특례시 SUWON SPECIAL CITY">
+                    </h1>
+                    <a href="https://www.suwon.go.kr/index.do" target="_blank" title="새창열림" class="home_btn">수원시청</a>
+                </div>
+                <h2>비영리단체회원</h2>
+            </div>
+        </header>    <!--//#header-->
+        <div id="container">
+            <main>
+                <section class="login_user">
+                    <h2 class="skip">회원가입, 비영리단체회원 회원정보입력 영역</h2>    <!--//skip-->
+                    <div class="login_user_wrap">
+                        <div class="login_group type1">
+                            <div class="numder_icon_group">
+                                <div class="numder_circle"><span>1</span></div>
+                                <div class="numder_circle"><span>2</span></div>
+                                <div class="numder_circle check_blue"><span class="check_icon">3</span></div>
+                                <div class="numder_circle"><span>4</span></div>
+                            </div>    <!--//numder_icon_group-->
+                            <div class="title_user_group">
+                                <h3 class="title">STEP 3. 회원정보입력</h3>
+                            </div>    <!--//title_user_group-->
+                            <div class="temp_details_box type1">
+                                <span class="details_tit">비영리단체로 가입하시면 참여마당 > 지역소식에 글을 게시할 수 있는 권한을 드립니다.</span>
+                                <span class="details_tit">아래 서식에 맞춰 가입 등록하신 후 고유번호증을 파일 업로드 또는 팩스(031-369-2012)로
+                                    송부 해 주시면 확인 후 승인해드립니다. <span class="red_line">(* 사업자등록증 승인불가)</span></span>
+                                <span class="details_tit">관련 문의는 031-5191-2673으로 주시기 바랍니다.</span>
+                                <span class="details_tit"><span class="red_line">수원시내 비영리 단체(종교단체 제외)만 승인가능하오니 참고하시기 바랍니다.</span></span>
+                            </div>    <!--//temp_details_box-->
+                            <h4 class="black_type">회원정보입력</h4>
+                            <div class="required_item type1">
+                                <span class="required_icon">*</span>
+                                <span class="red_required">표시는 필수 항목입니다.</span>
+                            </div>    <!--//required_item-->
+                            <form method="post" action="ND_insertAction.do">
+                                <input type="hidden" name="userNm" value="">
+                                <!-- <input type="hidden" name="userBirthday" value="" />
+                                <input type="hidden" name="userSex" value="" /> -->
+                                <input type="hidden" name="userKey" value="">
+                                <input type="hidden" name="userSelfchkYn" value="Y">
+                                <input type="hidden" name="realCheckYn" value="">
+                                <input type="hidden" name="loadCode" id="loadCode">
+                                <input type="hidden" name="idCkeck" id="idCkeck">
+                                <!-- <input type="hidden" name="email" id="email" /> -->
+                                <input type="hidden" name="telNum" id="telNum">
+                                <!-- <input type="hidden" name="mobileNum" id="mobileNum" /> -->
+                                <input type="hidden" name="userType" id="userType" value="1">
+                                <input type="hidden" name="userGradeCd" id="userGradeCd" value="1001">
+                                <!-- <input type="hidden" name="recomMobileNum" id="recomMobileNum" /> -->
+                                <fieldset>
+                                    <legend>회원정보입력</legend>
+                                    <table class="p_table mobile block">
+                                        <caption>회원정보입력 - 아이디, 비밀번호, 비밀번호 확인, 단체명(전체명), 단체명(약식명), 단체등록번호, 고유번호증, 주소, 
+                                            대표자명, 담당자명, 담당자 이메일, 전화번호, 대표자 휴대전화번호, 팩스번호 정보 입력, 정보문자수신여부, 정보메일수신여부
+                                        </caption>
+                                        <colgroup>
+                                            <col class="w20p">
+                                            <col>
+                                        </colgroup>
+                                        <tbody class="table_th_left">
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="userId" class="p_form_label"><span
+                                                            class="required_icon">*</span>아이디</label></th>
+                                                <td class="type1">
+                                                    <input type="text" name="userId" id="userId"
+                                                        class="p_input p_input_auto type1 input_width userid" maxlength="16"
+                                                        style="ime-mode:disabled;-ms-ime-mode:disabled;" required="" autocomplete="off"
+                                                        autocapitalize="off" e2e_type="0">
+                                                    <button type="button" class="member_enter_btn type8 small" id="idCheckBtn">중복확인</button>
+                                                    <span class="warning_cts">영문(소문자), 숫자만 가능합니다.(6~16자)</span>
+                                                </td>
+                                            </tr>
+                            
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="userPwd" class="p_form_label"><span
+                                                            class="required_icon">*</span>비밀번호</label></th>
+                                                <td class="type1">
+                                                    <input type="password" name="userPwd" id="userPwd"
+                                                        class="p_input p_input_auto type1 input_width" maxlength="15" required="" autocomplete="off"
+                                                        autocapitalize="off" e2e_type="0">
+                                                    <span class="warning_cts">영문(소문자), 숫자, 특수문자 포함(9~15자)&nbsp;&nbsp;&nbsp;<br>사용가능한 특수문자 : ~ ! @
+                                                        # $ % ^ &amp; * ( ) _ + { } | : ? )</span>
+                                                </td>
+                                            </tr>
+                            
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="userPwd2" class="p_form_label keepall">
+                                                    <span class="required_icon">*</span>비밀번호 확인</label></th>
+                                                <td class="type1"><input type="password" name="userPwd2" id="userPwd2"
+                                                        class="p_input p_input_auto type1 input_width" maxlength="15" required="" autocomplete="off"
+                                                        autocapitalize="off" e2e_type="0"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="userNm" class="p_form_label keepall">
+                                                    <span class="required_icon">*</span>단체명(전체명)</label></th>
+                                                <td><input type="text" name="userNm" id="userNm" class="p_input p_input_auto type1 input_width" 
+                                                    required="" autocomplete="off" autocapitalize="off" e2e_type="0"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="orgSimpleNm" class="p_form_label keepall">
+                                                    <span class="required_icon">*</span>단체명(약식명)</label>
+                                                </th>
+                                                <td><input type="text" name="orgSimpleNm" id="orgSimpleNm" class="p_input p_input_auto type1 input_width" 
+                                                    required="" autocomplete="off" autocapitalize="off" e2e_type="0"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="orgNumber" class="p_form_label keepall"><span class="required_icon">*</span>단체(사업자)등록번호</label>
+                                                </th>
+                                                <td>
+                                                    <input type="text" name="orgNumber" id="orgNumber" class="p_input p_input_auto type1 input_width" maxlength="15"
+                                                        required="" autocomplete="off" autocapitalize="off" e2e_type="0">
+                                                    <span class="warning_cts">' - ' 제외, 숫자만 기입해 주세요.</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" class="type1"><span class="required_icon">*</span>고유번호증</th>
+                                                <td>
+                                                    <div class="p_upload">
+                                                        <div class="p_form_group">
+                                                            <div class="form_group_upload">
+                                                                <input type="file" name="orgLicenseFile" id="orgLicenseFile" class="upload_file_hidden">
+                                                                <span id="filename" class="p_input disabled"></span>
+                                                                <button type="button" class="p_upload_clear clear">선택한 1번 첨부 제거</button>
+                                                            </div>
+                                                            <div class="p_input_addon">
+                                                                <label for="orgLicenseFile" class="member_enter_btn type8 small primary file_btn" data-button="upload"
+                                                                    data-parent=".p_upload" data-original="#orgLicenseFile" data-showfilename="#filename"><span
+                                                                        class="skip">1번째 </span>파일선택</label>
+                                                                <!-- data-original="#fileorg" : 첨부파일 input의 id 표시, data-showfilename="#filename" : 파일면 표시될 곳의 id-->
+                                                            </div>
+                                            
+                                                        </div>
+                                                    </div>
+                                                    <p class="warning_cts">고유번호증<span class="red_line">(* 사업자등록증 승인불가)</span>을 스캔 또는 사진으로 찍어서 파일
+                                                        업로드&nbsp;&nbsp;&nbsp;<br>* 첨부가능한 확장자 : jpg, jpeg, gif, png, bmp, hwp, doc, pdf</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr data-policy-source="policySelection" data-policy-value="Y">
+                                                <th scope="row" class="type1"><label for="zipCode" class="p_form_label"><span class="required_icon">*</span>소재지주소</label></th>
+                                                <td class="type1">
+                                                    <!-- 우편번호 -->
+                                                    <span class="adress_cts">
+                                                        <input type="text" name="zipCode" id="zipCode" class="p_input p_input_auto type2 p_form_address zipcode"
+                                                            title="우편번호" value="" maxlength="7" readonly="readonly" autocomplete="off" autocapitalize="off"
+                                                            e2e_type="21" e2e_inputid="6">
+                                                        <button type="button" title="새창열림" id="zipCodePop1" class="member_enter_btn type10 small">우편번호찾기</button>
+                                                    </span>
+                                                    <span class="adress_cts">
+                                                        <!-- 검색된 주소 자동입력 -->
+                                                        <input type="text" name="baseAddr" id="baseAddr" class="p_input type3 p_form_address" title="기본 주소 입력"
+                                                            value="" readonly="readonly" autocomplete="off" autocapitalize="off" e2e_type="21" e2e_inputid="7">
+                                                    </span>
+                                                    <span class="adress_cts">
+                                                        <!-- 상세주소 입력 -->
+                                                        <input type="text" name="detailAddr" id="detailAddr" class="p_input type3 p_form_address" title="상세 주소 입력"
+                                                            value="" autocomplete="off" autocapitalize="off" e2e_type="21" e2e_inputid="8">
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="orgFullNm" class="p_form_label"><span class="required_icon">*</span>대표자명</label></th>
+                                                <td><input type="text" name="orgFullNm" id="orgFullNm" class="p_input p_input_auto type1" maxlength="10" required=""
+                                                        autocomplete="off" autocapitalize="off" e2e_type="0"></td>
+                                            </tr>
+                            
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="email" class="p_form_label keepall">담당자 이메일</label></th>
+                                                <td class="type1">
+                                                    <input type="text" name="email" id="email" class="p_input p_input_auto type1 input_width"
+                                                        title="이메일 입력" value="" maxlength="100" autocomplete="off" autocapitalize="off"
+                                                        e2e_type="21" e2e_inputid="4">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" class="type1"><label for="mobileNum" class="p_form_label keepall"><span class="required_icon">*</span>대표자 휴대전화번호</label>
+                                                </th>
+                                                <td>
+                                                    <input type="text" name="mobileNum" id="mobileNum" class="p_input p_input_auto type1" title="대표자 휴대전화번호 입력" value=""
+                                                        maxlength="20" data-type="INPUT" data-inputtype="TEL" required="" autocomplete="off" autocapitalize="off"
+                                                        e2e_type="21" e2e_inputid="6">
+                                                </td>
+                                            </tr>
+                            
+                                            <tr>
+                                                <th scope="row" class="type1 keepall">정보문자수신여부</th>
+                                                <td class="type2">
+                                                    <span class="info_text margin_r_25">시청에서 제공하는 정보문자를 받으시겠습니까?</span>
+                                                    <span class="temp_checkbox radio_margin">
+                                                        <input type="radio" name="rcvSmsYn" id="rcvSmsYn-Y" value="Y" title="정보문자 수신여부 선택 - 예"
+                                                            checked="">
+                                                        <label for="rcvSmsYn-Y">예</label>
+                                                    </span>
+                                                    <span class="temp_checkbox radio_margin">
+                                                        <input type="radio" name="rcvSmsYn" id="rcvSmsYn-N" value="N" title="정보문자 수신여부 선택 - 아니요">
+                                                        <label for="rcvSmsYn-N">아니요</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                            
+                                            <tr>
+                                                <th scope="row" class="type1 keepall">정보메일수신여부</th>
+                                                <td class="type2">
+                                                    <span class="info_text margin_r_25">시청에서 제공하는 정보메일을 받으시겠습니까?</span>
+                                                    <span class="temp_checkbox radio_margin">
+                                                        <input type="radio" name="rcvEmailYn" id="rcvEmailYn-Y" value="Y" title="정보메일 수신 여부 선택 - 예"
+                                                            checked="">
+                                                        <label for="rcvEmailYn-Y">예</label>
+                                                    </span>
+                                                    <span class="temp_checkbox radio_margin">
+                                                        <input type="radio" name="rcvEmailYn" id="rcvEmailYn-N" value="N"
+                                                            title="정보메일 수신 여부 선택 - 아니요">
+                                                        <label for="rcvEmailYn-N">아니오</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    <!--//p_table-->
+                                    <div class="consent_group type3">
+                                        <a href="" class="member_btn type2">취소</a>
+                                        <span class="submit_wrap">
+                                            <input type="submit" value="확인" class="login_submit">    <!--//login_submit-->
+                                        </span>
+                                    </div>    <!--//consent_group-->
+                                </fieldset>
+                            </form>
+                        </div>    <!--//login_group-->
+                    </div>    <!--//login_user_wrap-->
+                </section>    <!--//login_user-->
+            </main>
+        </div>    <!--//container-->
+        <footer id="footer">
+            <div class="footer_box">
+                <div class="wrap">
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="" target="_blank" title="새창열림">저작권정책</a></li>
+                            <li><a href="" target="_blank" title="새창열림">개인정보처리방침</a></li>
+                            <li><a href="" target="_blank" title="새창열림">찾아오시는 길</a></li>
+                            <li><a href="" target="_blank" title="새창열림">청사안내(당직실)</a></li>
+                        </ul>
+                    </div>    <!--//f_nav-->
+                    <div class="f_info">
+                        <div class="f_tel">
+                            <span class="tel_icon">수원시 휴먼콜센터</span>
+                            <span class="tel_bold">1899-3300,</span>
+                            <span class="tel_regular">031-5191-2114</span>
+                        </div>
+                        <div class="f_group">
+                            <p class="info_desc">본 홈페이지에 게시된 이메일주소가 자동 수집되는 것을 거부하며, 위반 시 정보통신망법에 의해 처벌됩니다.</p>
+                            <address class="info_add">(16490) 경기도 수원시 팔달구 효원로 241(인계동)</address>
+                            <p class="copyright">COPYRIGHT ⓒ 2018 SUWON SPECIAL CITY ALL RIGHTS RESERVED.</p>
+                        </div>
+                    </div>    <!--//f_info-->
+                </div>
+            </div>    <!--//footer_box-->
+        </footer>    <!--//#footer-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="수원특례시청">
+	<meta name="keywords" content="수원특례시청">
+	<meta name="description" content="수원특례시청">
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:site_name" content="수원특례시청">
+	<meta property="og:url" content="https://www.suwon.go.kr/" />
+	<meta property="og:image" content="https://www.suwon.go.kr/resources/web/common/images/share_symbol.png" />
+	<meta property="og:title" content="수원특례시청" />
+	<meta property="og:description" content="[수원을 새롭게, 시민을 빛나게] 수원특례시의 주요소식, 시민참여, 행정서비스 안내" />
+	<meta property="og:type" content="website">
+    <link rel="apple-touch-icon" href="https://www.suwon.go.kr/favicon_200x200.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.suwon.go.kr/favicon.ico" />
+	<link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/jquery-1.12.4.HS-20200709.min.js"></script>
+    <script src="./js/jquery.screen.min.custom.1.0.2.js"></script>
+    <script src="./js/login.js"></script>
+    <title>로그인 : HOME > 수원시 통합 회원 > 로그인</title>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="accessibility">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<header id="header">
+			<div class="wrap">
+				<div class="top_link">
+					<h1 class="logo">
+						<img src="./images/login_top_logo.png" alt="수원특례시 SUWON SPECIAL CITY">
+					</h1>
+					<a href="https://www.suwon.go.kr/index.do" target="_blank" title="새창열림" class="home_btn">수원시청</a>
+				</div>
+				<h2>로그인</h2>
+			</div>
+		</header>    <!--//#header-->
+		<div id="container">
+			<main>
+				<section class="login_user">
+					<h2 class="skip">로그인 방식, 통합회원로그인, 비회원, 비영리단체 로그인 선택 및 인증 영역</h2>    <!--//skip-->
+					<div class="login_user_wrap">
+						<div class="user_tab">
+							<ul class="user_tab_list">
+								<li class="user_tab_item active">
+									<button type="button" class="user_tab_btn" title="선택됨">
+										<span class="btn_text">통합회원</span>
+									</button>    <!--//user_tab_btn-->
+								</li>    <!--//user_tab_item-->
+								<li class="user_tab_item">
+									<button type="button" class="user_tab_btn">
+										<span class="btn_text">비회원</span>
+									</button>    <!--//user_tab_btn-->
+								</li>    <!--//user_tab_item-->
+								<li class="user_tab_item">
+									<button type="button" class="user_tab_btn">
+										<span class="btn_text">비영리단체</span>
+									</button>    <!--//user_tab_btn-->
+								</li>    <!--//user_tab_item-->
+							</ul>    <!--//user_tab_list-->
+						</div>    <!--//user_tab-->
+						<div class="user_cts">
+							<div class="user_cts_list">
+								<div class="user_cts_item item01 active">
+									<form action="/login.do" method="post" onsubmit="return fn_loginSubmit(this)">
+										<fieldset>
+											<legend>통합로그인 입력 폼</legend>
+											<div class="user_cts_inner">
+												<div class="form_item id_type">
+													<span class="form_input">
+														<input type="id" name="userid" id="userid_1" title="아이디 입력" placeholder="아이디를 입력해주세요." class="input_login" autocomplete="off" required="required" maxlength="20">
+													</span>    <!--//form_input-->
+												</div>    <!--//form_item id_type-->
+												<div class="form_item password_type">
+													<span class="form_input">
+														<input type="password" name="userPasswd" id="userPasswd_1" title="비밀번호 입력" placeholder="비밀번호를 입력해주세요."
+														 class="input_login" maxlength="15" autocomplete="off" autocapitalize="off" e2e_tye="21" e2e_inputid="2" required="required">
+														<button type="button" class="user_pas_eye" title="비밀번호 숨김">
+															<i></i>    <!-- 눈 아이 콘-->
+															<span class="skip sound_only">비밀번호 숨김</span>
+														</button>    <!--//user_pas_eye-->
+													</span>    <!--//form_input-->
+												</div>    <!--//form_item password_type-->
+											</div>    <!--//user_cts_inner-->
+											<div class="form_submit">
+												<span class="submit_wrap">
+													<input type="submit" value="로그인" class="login_submit">    <!--//login_submit-->
+												</span>    <!--//submit_wrap-->
+											</div>    <!--//form_submit-->
+										</fieldset>
+									</form>
+									<div class="find_login">
+										<a href="">아이디/비밀번호 찾기</a>
+										<a href="">회원가입</a>
+									</div>    <!--//find_login-->
+									<div class="link_login">
+										<div class="link_log_wrap">
+											<button type="button" title="간편인증 새창열림" class="link_log_btn">
+												<span class="link_title">간편인증</span>
+												<span class="link_list_wrap">
+													<span>
+														<i class="log_icon kakao"></i>
+														<em class="skip">카카오</em>
+													</span>
+													<span>
+														<i class="log_icon kb"></i>
+														<em class="skip">KB국민은행</em>
+													</span>
+													<span>
+														<i class="log_icon payco"></i>
+														<em class="skip">페이코</em>
+													</span>
+													<span>
+														<i class="log_icon pass"></i>
+														<em class="skip">통신사PASS</em>
+													</span>
+													<span>
+														<i class="log_icon samsung"></i>
+														<em class="skip">삼성PASS</em>
+													</span>
+													<span>
+														<i class="log_icon naver"></i>
+														<em class="skip">네이버</em>
+													</span>
+													<span>
+														<i class="log_icon shinhan"></i>
+														<em class="skip">신한은행</em>
+													</span>
+													<span>
+														<i class="log_icon toss"></i>
+														<em class="skip">TOSS</em>
+													</span>
+													<span>
+														<i class="log_icon hana"></i>
+														<em class="skip">하나은행</em>
+													</span>
+													<span>
+														<i class="log_icon nh"></i>
+														<em class="skip">NH모바일인증서</em>
+													</span>
+													<span>
+														<i class="log_icon dream"></i>
+														<em class="skip">드림인증</em>
+													</span>
+													<span>
+														<i class="log_icon banksalad"></i>
+														<em class="skip">뱅크샐러드</em>
+													</span>
+												</span>    <!--//link_list_wrap-->
+											</button>    <!--//link_log_btn-->
+										</div>    <!--//link_log_wrap-->
+									</div>    <!--//link_login-->
+									<div class="login_notice">
+										<p class="warning">비밀번호는 영문 대소문자를 구별하오니 유의하시기 바랍니다.</p>
+										<p class="warning">개인정보 보호를 위하여 비밀번호는 영문자, 숫자, 특수문자를 포함한 9~15자리로 구성되어 있습니다.</p>
+										<p class="warning">회원유지 재동의(만료일 90일전부터 홈페이지 로그인시 재동의 안내 팝업)를 하지 않으실 경우 <span class="blue_line type1">자동 탈퇴</span> 처리됨을 알려드립니다.</p>
+										<p class="warning">간편인증은 회원가입 후 이용 가능 합니다.</p>
+									</div>    <!--//login_notice-->
+								</div>    <!--//user_cts_item 통합회원-->
+								<div class="user_cts_item item02">
+									<div class="essential">
+										<h4 class="black_type">[필수] 개인정보 수집 및 이용동의</h4>
+										<div class="check_wrap">
+											<span class="temp_checkbox">
+												<input type="radio" id="policyCheck-Y" name="policyCheck" value="Y" required="">
+												<label for="policyCheck-Y">동의</label>
+											</span>    <!--//temp_checkbox-->
+											<span class="temp_checkbox">
+												<input type="radio" id="policyCheck-N" name="policyCheck" value="N" required="">
+												<label for="policyCheck-N">미동의</label>
+											</span>    <!--//temp_checkbox-->
+										</div>    <!--//check_wrap-->
+									</div>    <!--//essential-->
+									<div class="gray_scroll type2">
+										<span class="skip">개인정보 수집 및 이용에 대한 안내 내용</span>
+										<div class="personal_inner" tabindex="0">
+											<div class="personal_writing">
+												<p>수원시는 다음의 목적을 위해 개인정보를 수집 및 이용합니다.</p>
+												<strong>[수집 목적]</strong><br>
+												○ 홈페이지의 원활한 서비스를 위해 비회원의 정보 관리<br><br>
+												<strong>[수집하는 개인정보의 항목]</strong><br><br>
+												<div>
+													<table class="p_table">
+														<caption>구분, 수집항목</caption>
+														<colgroup>
+															<col style="width:120px;">
+															<col>
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">구분</th>
+																<th scope="col">수집항목</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="text_center">필수항목</td>
+																<td>이름, 휴대전화번호, 주소(민원등록시 필수)</td>
+															</tr>
+															<tr>
+																<td class="text_center">본인인증정보</td>
+																<td>이름, 휴대폰 인증코드 또는 아이핀 인증코드</td>
+															</tr>
+															<tr>
+																<td class="text_center">자동수집항목</td>
+																<td>인터넷 서비스 이용과정에서 생성되는 서비스 이용기록, 접속 로그, 접속 IP 정보 등</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<br>
+												<strong>[동의를 거부할 권리가 있다는 사실과 동의 거부에 따른 불이익 내용]</strong><br>
+													이용자는 수원시에서 수집하는 개인정보에 대해 동의를 거부할 권리가 있으며 동의 거부 시에는 정상적인 서비스 지원이 안될 수 있습니다.<br>
+												<br>
+											</div>    <!--//personal_writing-->
+										</div>    <!--//personal_inner-->
+									</div>    <!--//gray_scroll type2-->
+									<h4 class="black_type type1">본인인증</h4>
+									<div class="certified">
+										<div class="phone">
+											<span class="phone_icon">
+												<i class="ph_icon"></i>
+												<em class="skip">휴대폰 인증 아이콘</em>
+											</span>    <!--//phone_icon-->
+											<span class="cer_tit">휴대폰 인증</span>
+											<button type="button" title="휴대폰 인증 새창열림" class="blue_btn">인증하기</button>
+										</div>    <!--//phone-->
+										<div class="ipin">
+											<span class="ipin_icon">
+												<i class="ip_icon"></i>
+												<em class="skip">아이핀 인증 아이콘</em>
+											</span>    <!--//ipin_icon-->
+											<span class="cer_tit">아이핀 인증</span>
+											<button type="button" title="아이핀 인증 새창열림" class="blue_btn">인증하기</button>
+										</div>    <!--//ipin-->
+									</div>    <!--//certified-->
+									<h4 class="black_type type1">SNS 인증</h4>
+									<div class="temp_details_box">
+										<span class="details_tit">SNS 로그인시 <span class="red_line type1">최초 1회 본인인증</span>이 필요합니다.</span>
+										<span class="details_tit">SNS 인증 정보는 최초 인증일 기준 <span class="red_line type1">1년 후</span> 자동 삭제 됩니다.</span>
+										<div class="sns_box">
+											<button type="button" title="카카오 인증 새창열림" class="kakao">카카오 로그인</button>
+											<button type="button" title="네이버 인증 새창열림" class="naver">네이버 로그인</button>
+										</div>    <!--//sns_box-->
+									</div>    <!--//temp_details_box-->
+								</div>    <!--//user_cts_item 비회원-->
+								<div class="user_cts_item item03">
+									<form action="/login.do" method="post" onsubmit="return fn_loginSubmit(this)">
+										<fieldset>
+											<legend>비영리단체 입력 폼</legend>
+											<div class="user_cts_inner">
+												<div class="form_item id_type">
+													<span class="form_input">
+														<input type="id" name="userid" id="userid_2" title="아이디 입력" placeholder="아이디를 입력해주세요."
+															class="input_login" autocomplete="off" required="required" maxlength="20">
+													</span>    <!--//form_input-->
+												</div>    <!--//form_item id_type-->
+												<div class="form_item password_type">
+													<span class="form_input">
+														<input type="password" name="userPasswd" id="userPasswd_2" title="비밀번호 입력"
+															placeholder="비밀번호를 입력해주세요." class="input_login" maxlength="15" autocomplete="off"
+															autocapitalize="off" e2e_tye="21" e2e_inputid="2" required="required">
+														<button type="button" class="user_pas_eye" title="비밀번호 숨김">
+															<i></i>    <!-- 눈 아이 콘-->
+															<span class="skip sound_only">비밀번호 숨김</span>
+														</button>    <!--//user_pas_eye-->
+													</span>    <!--//form_input-->
+												</div>    <!--//form_item password_type-->
+											</div>   <!--//user_cts_inner-->
+											<div class="form_submit">
+												<span class="submit_wrap">
+													<input type="submit" value="로그인" class="login_submit">    <!--//login_submit-->
+												</span>    <!--//submit_wrap-->
+											</div>    <!--//form_submit-->
+										</fieldset>
+									</form>
+									<div class="find_login">
+										<a href="">회원가입</a>
+									</div>    <!--//find_login-->
+									<div class="login_notice type1">
+										<p class="warning">아이디/패스워드 분실 문의는 031-5191-2673으로 주시기 바랍니다.</p>
+										<p class="warning">아이디 및 비밀번호 영문 대소문자를 구별하오니 유의하시기 바랍니다.</p>
+										<p class="warning">개인정보 보호를 위하여 비밀번호는 영문자, 숫자, 특수문자를 포함한 9~15자리로 구성되어 있습니다.</p>
+									</div>    <!--//login_notice-->
+								</div>    <!--//user_cts_item 비영리단체-->
+							</div>    <!--//user_cts_list-->
+						</div>    <!--//user_cts-->
+					</div>    <!--//login_user_wrap-->
+				</section>    <!--//login_user-->
+			</main>
+		</div>    <!--//container-->
+		<footer id="footer">
+			<div class="footer_box">
+				<div class="wrap">
+					<div class="f_nav">
+						<ul>
+							<li><a href="" target="_blank" title="새창열림">저작권정책</a></li>
+							<li><a href="" target="_blank" title="새창열림">개인정보처리방침</a></li>
+							<li><a href="" target="_blank" title="새창열림">찾아오시는 길</a></li>
+							<li><a href="" target="_blank" title="새창열림">청사안내(당직실)</a></li> 
+						</ul>
+					</div>    <!--//f_nav-->
+					<div class="f_info">
+						<div class="f_tel">
+							<span class="tel_icon">수원시 휴먼콜센터</span>
+							<span class="tel_bold">1899-3300,</span>
+							<span class="tel_regular">031-5191-2114</span>
+						</div>
+						<div class="f_group">
+							<p class="info_desc">본 홈페이지에 게시된 이메일주소가 자동 수집되는 것을 거부하며, 위반 시 정보통신망법에 의해 처벌됩니다.</p>
+							<address class="info_add">(16490) 경기도 수원시 팔달구 효원로 241(인계동)</address>
+							<p class="copyright">COPYRIGHT ⓒ 2018 SUWON SPECIAL CITY ALL RIGHTS RESERVED.</p>
+						</div>
+					</div>    <!--//f_info-->
+				</div>
+			</div>    <!--//footer_box-->
+		</footer>    <!--//#footer-->
+	</div>
+</body>
+</html>
